@@ -2,11 +2,11 @@ import { Shield, Award, CheckCircle } from "lucide-react";
 
 export const TrustSection = () => {
   const clients = [
-    { name: "Microsoft", logo: "M" },
-    { name: "Jiffy Lube", logo: "JL" },
-    { name: "Ingram Micro", logo: "IM" },
-    { name: "D&H", logo: "D&H" },
-    { name: "TD Synnex", logo: "TD" },
+    { name: "Microsoft", color: "text-[#00A4EF]" },
+    { name: "Jiffy Lube", color: "text-[#E51837]" },
+    { name: "Ingram Micro", color: "text-[#0066CC]" },
+    { name: "D&H", color: "text-[#0066CC]" },
+    { name: "TD Synnex", color: "text-[#0066CC]" },
   ];
 
   return (
@@ -25,14 +25,16 @@ export const TrustSection = () => {
             </p>
           </div>
 
-          {/* Client Logos */}
+          {/* Client Logos - Using text-based logos for licensing safety */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
             {clients.map((client) => (
               <div
                 key={client.name}
-                className="flex items-center justify-center p-6 bg-card rounded-lg border border-border hover:shadow-md transition-shadow"
+                className="flex items-center justify-center p-6 bg-card rounded-lg border border-border hover:shadow-md transition-shadow group"
               >
-                <div className="text-2xl font-bold text-muted-foreground">{client.logo}</div>
+                <div className={`text-2xl font-bold ${client.color} group-hover:scale-110 transition-transform`}>
+                  {client.name}
+                </div>
               </div>
             ))}
           </div>
