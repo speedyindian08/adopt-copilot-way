@@ -22,12 +22,16 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button variant="cta" size="xl" className="group">
-              Enroll in Copilot Academy Today
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="cta" size="xl" className="group" asChild>
+              <a href="#contact">
+                Enroll in Copilot Academy Today
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button variant="outline" size="xl">
-              View Plans & Pricing
+            <Button variant="outline" size="xl" asChild>
+              <a href="#pricing">
+                View Plans & Pricing
+              </a>
             </Button>
           </div>
 

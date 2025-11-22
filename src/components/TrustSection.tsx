@@ -4,13 +4,14 @@ import AutoScroll from "embla-carousel-auto-scroll";
 
 export const TrustSection = () => {
   const clients = [
+    { name: "JIFFY LUBE", id: "jiffy-lube" },
     { name: "ARC", id: "arc" },
+    { name: "PURAKAL", id: "purakal" },
     { name: "PREZENT", id: "prezent" },
     { name: "SOTC", id: "sotc" },
     { name: "BP", id: "bp" },
     { name: "YELLOW", id: "yellow" },
     { name: "EMBLEM", id: "emblem" },
-    { name: "JIFFY", id: "jiffy" },
   ];
 
   const [emblaRef] = useEmblaCarousel(
@@ -23,14 +24,11 @@ export const TrustSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <Award className="w-6 h-6 text-primary" />
-              <h2 className="text-3xl font-bold text-foreground">
-                Trusted by Experts and Fortune 500 Companies
-              </h2>
-            </div>
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Trusted by Industry Leaders Across Key Sectors
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The Copilot Academy methodology is trusted by experts from Fortune 500 companies, with Microsoft themselves as a client.
+              The ESS Copilot Academy methodology is trusted by experts from Fortune 500 companies, with Microsoft themselves as a client.
             </p>
           </div>
 
