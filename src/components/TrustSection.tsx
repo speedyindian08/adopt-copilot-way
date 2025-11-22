@@ -1,13 +1,22 @@
 import { Shield, Award, CheckCircle } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 export const TrustSection = () => {
   const clients = [
-    { name: "Microsoft", color: "text-[#00A4EF]" },
-    { name: "Jiffy Lube", color: "text-[#E51837]" },
-    { name: "Ingram Micro", color: "text-[#0066CC]" },
-    { name: "D&H", color: "text-[#0066CC]" },
-    { name: "TD Synnex", color: "text-[#0066CC]" },
+    { name: "ARC", id: "arc" },
+    { name: "PREZENT", id: "prezent" },
+    { name: "SOTC", id: "sotc" },
+    { name: "BP", id: "bp" },
+    { name: "YELLOW", id: "yellow" },
+    { name: "EMBLEM", id: "emblem" },
+    { name: "JIFFY", id: "jiffy" },
   ];
+
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, dragFree: true },
+    [AutoScroll({ playOnInit: true, speed: 1 })]
+  );
 
   return (
     <section className="py-16 bg-muted/50 border-y border-border">
@@ -25,18 +34,20 @@ export const TrustSection = () => {
             </p>
           </div>
 
-          {/* Client Logos - Using text-based logos for licensing safety */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-            {clients.map((client) => (
-              <div
-                key={client.name}
-                className="flex items-center justify-center p-6 bg-card rounded-lg border border-border hover:shadow-md transition-shadow group"
-              >
-                <div className={`text-2xl font-bold ${client.color} group-hover:scale-110 transition-transform`}>
-                  {client.name}
+          {/* Auto-scrolling Client Logos Carousel */}
+          <div className="overflow-hidden mb-12" ref={emblaRef}>
+            <div className="flex gap-8">
+              {[...clients, ...clients].map((client, index) => (
+                <div
+                  key={`${client.id}-${index}`}
+                  className="flex-[0_0_200px] flex items-center justify-center h-24 bg-card rounded-lg border border-border p-6"
+                >
+                  <span className="text-xl font-bold text-muted-foreground uppercase tracking-wider">
+                    {client.name}
+                  </span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Trust Indicators */}
