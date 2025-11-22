@@ -97,8 +97,11 @@ export const PricingSection = () => {
                   variant={plan.highlighted ? "cta" : "default"}
                   size="lg"
                   className="w-full"
+                  asChild
                 >
-                  {plan.cta}
+                  <a href="#contact">
+                    {plan.cta}
+                  </a>
                 </Button>
               </div>
             ))}

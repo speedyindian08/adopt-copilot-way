@@ -15,8 +15,10 @@ export const Footer = () => {
             <p className="text-xl text-primary-foreground/90 mb-8">
               Join Fortune 500 companies and start seeing results in 30 days
             </p>
-            <Button variant="default" size="xl" className="bg-background text-foreground hover:bg-background/90">
-              Enroll in Copilot Academy Today
+            <Button variant="default" size="xl" className="bg-background text-foreground hover:bg-background/90" asChild>
+              <a href="#contact">
+                Enroll in Copilot Academy Today
+              </a>
             </Button>
           </div>
         </div>
