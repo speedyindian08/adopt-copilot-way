@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 export const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "We deployed Copilot across 2,500 users in just 30 days with ESS Academy. Their structured approach and role-based training eliminated the typical adoption friction we've experienced with other enterprise tools. The combination of MVP-led expertise and dedicated coaching made this our smoothest enterprise software rollout to date.",
+      quote: "We were skeptical. Another enterprise tool, another failed rollout. But ESS Copilot Academy cut through the noise with their role-based approach—no fluff, just what each team needed to actually use Copilot. We got 2,500 users deployed in 30 days. That's not a typo. Their MVP-led coaching made this our smoothest rollout ever.",
       author: "Sarah Mitchell",
       title: "VP of Digital Transformation",
       company: "Fortune 500 Healthcare Provider",
@@ -11,7 +11,7 @@ export const TestimonialsSection = () => {
       metricValue: "2,500 users in 30 days"
     },
     {
-      quote: "Our teams were productive with Copilot within the first week—not months. The hands-on prompt-writing workshops and custom playbooks meant our staff could immediately apply what they learned. We saw measurable productivity gains in week two, which is unprecedented for enterprise software of this complexity.",
+      quote: "Our initial Copilot deployment stalled—people weren't getting it. ESS Copilot Academy changed that in week one. The hands-on prompt workshops meant our teams finally got it. Real productivity gains showed up by week two. I've never seen adoption this fast for something this complex.",
       author: "James Richardson",
       title: "Director of IT Operations",
       company: "Global Manufacturing Firm",
@@ -19,7 +19,7 @@ export const TestimonialsSection = () => {
       metricValue: "Productive in 1 week"
     },
     {
-      quote: "The numbers speak for themselves: 35% productivity increase across teams using Copilot, with a projected 353% ROI over three years. ESS Academy didn't just train our people—they transformed how we work. The dedicated coaching and adoption tracking gave us the visibility we needed to justify the investment to our board.",
+      quote: "I needed to justify a seven-figure Copilot investment to our board—with proof, not promises. ESS Copilot Academy gave me the data and the roadmap: 353% projected ROI over three years, backed by their adoption tracking. They didn't just reduce my risk—they eliminated it. The board approved in one meeting.",
       author: "Dr. Michael Chen",
       title: "Chief Information Officer",
       company: "Regional Financial Services",
