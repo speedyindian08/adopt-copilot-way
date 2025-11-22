@@ -118,7 +118,7 @@ export const ContactForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Ready to Get Started?
+              Stop Guessing. Start Measuring. Guarantee Your Copilot ROI.
             </h2>
             <p className="text-xl text-muted-foreground">
               Contact us to discuss your Copilot Academy needs and get a custom quote for your organization
@@ -282,7 +282,7 @@ export const ContactForm = () => {
                   className="w-full"
                   disabled={isLoading}
                 >
-                  {isLoading ? "Sending..." : "Send Message"}
+                  {isLoading ? "Booking..." : "Book Your Personalized Copilot ROI Strategy Session"}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
