@@ -282,7 +282,7 @@ export const ContactForm = () => {
                   className="w-full"
                   disabled={isLoading}
                 >
-                  {isLoading ? "Booking..." : "Book Your Personalized Copilot ROI Strategy Session"}
+                  {isLoading ? "Booking..." : "Secure Your Copilot ROI Session"}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
