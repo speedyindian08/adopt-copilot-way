@@ -9,6 +9,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { ContactForm } from "@/components/ContactForm";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
+import { Chatbot } from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -31,6 +32,7 @@ const Index = () => {
         <FAQSection />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };
