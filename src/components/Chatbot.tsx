@@ -16,7 +16,7 @@ export const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! I'm here to help you with Copilot Academy. Ask me anything about our training programs, pricing, or Microsoft Copilot!",
+      content: "Hi! 👋 I'm the ESS Copilot Academy Assistant. I can help you understand our training packages, pricing, delivery options, and which program is best for your team. If you'd like, I can also help you schedule time with our team.",
     },
   ]);
   const [input, setInput] = useState("");
