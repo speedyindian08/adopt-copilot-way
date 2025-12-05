@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import essLogo from "@/assets/ess-logo.png";
 import microsoftBadge from "@/assets/microsoft-partner-badge.png";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-muted/50 border-t border-border">
+  return <footer className="bg-muted/50 border-t border-border">
       {/* Final CTA Section */}
       <div className="bg-gradient-to-r from-primary to-secondary py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +28,7 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <img src={essLogo} alt="ESS" className="h-12 w-auto mb-4" />
             <p className="text-muted-foreground text-sm mb-4 max-w-md">
-              Enterprise Software Solutions - Empowering organizations with expert-led training and adoption strategies for Microsoft technologies.
+              Enterprises Software Solutions - Empowering organizations with expert &amp; MVP-led implementation, training and adoption strategies for Microsoft technologies.               
             </p>
             <img src={microsoftBadge} alt="Microsoft Solutions Partner" className="h-24 w-auto" />
           </div>
@@ -70,6 +68,5 @@ export const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Enterprise Software Solutions. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
