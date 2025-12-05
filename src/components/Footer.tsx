@@ -58,8 +58,9 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Email: info@ess.com</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Email: copilotacademy@software-dudes.ai</li>
+              <li>Phone: (888)-732-6521</li>
+              <li>
+            </li>
             </ul>
           </div>
         </div>
