@@ -59,7 +59,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Email: info@ess.com</li>
               <li>Phone: (555) 123-4567</li>
-              <li>Support: 24/7 Available</li>
+              <li>Email: copilotacademy@software-dudes.ai</li>
             </ul>
           </div>
         </div>
