@@ -1,0 +1,948 @@
+<!-- ESS Copilot Academy - Complete Page Export -->
+<!-- Paste this entire block into your existing page -->
+
+<style>
+/* ESS Copilot Academy Styles */
+.ess-copilot-page * { margin: 0; padding: 0; box-sizing: border-box; }
+.ess-copilot-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #2d3748; }
+.ess-copilot-page a { text-decoration: none; color: inherit; }
+
+/* Variables as direct values */
+.ess-container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+@media (min-width: 640px) { .ess-container { padding: 0 1.5rem; } }
+@media (min-width: 1024px) { .ess-container { padding: 0 2rem; } }
+
+/* Buttons */
+.ess-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.625rem 1.25rem; font-size: 0.875rem; font-weight: 500; border-radius: 0.75rem; border: 1px solid transparent; cursor: pointer; transition: all 0.3s ease; }
+.ess-btn-cta { background-color: #1B5E20; color: #fff; }
+.ess-btn-cta:hover { background-color: #145218; }
+.ess-btn-outline { background-color: transparent; color: #2d3748; border-color: #e2e8f0; }
+.ess-btn-outline:hover { background-color: #f7fafc; }
+.ess-btn-secondary { background-color: #1976D2; color: #fff; }
+.ess-btn-secondary:hover { background-color: #1565C0; }
+.ess-btn-white { background-color: #fff; color: #2d3748; }
+.ess-btn-white:hover { background-color: #f7fafc; }
+.ess-btn-xl { padding: 1rem 2rem; font-size: 1.125rem; }
+.ess-btn-sm { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+.ess-btn-block { width: 100%; }
+
+/* Section styling */
+.ess-section { padding: 5rem 0; }
+.ess-section-title { font-size: 1.875rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
+@media (min-width: 1024px) { .ess-section-title { font-size: 2.25rem; } }
+.ess-section-subtitle { font-size: 1.125rem; color: #718096; text-align: center; max-width: 48rem; margin: 0 auto; }
+.ess-section-header { margin-bottom: 3rem; }
+
+/* Header */
+.ess-header { position: sticky; top: 0; z-index: 50; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid #e2e8f0; }
+.ess-header-content { display: flex; align-items: center; justify-content: space-between; height: 4rem; }
+.ess-header-left { display: flex; align-items: center; gap: 2rem; }
+.ess-logo { height: 2.5rem; width: auto; }
+.ess-nav { display: none; align-items: center; gap: 1.5rem; }
+@media (min-width: 768px) { .ess-nav { display: flex; } }
+.ess-nav-link { font-size: 0.875rem; font-weight: 500; color: #2d3748; transition: color 0.3s; }
+.ess-nav-link:hover { color: #1B5E20; }
+
+/* Hero */
+.ess-hero { position: relative; padding: 5rem 0; overflow: hidden; }
+.ess-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(27,94,32,0.03), rgba(25,118,210,0.03), rgba(205,220,57,0.03)); pointer-events: none; }
+.ess-hero-content { position: relative; max-width: 56rem; margin: 0 auto; text-align: center; }
+.ess-hero-badge { display: inline-block; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; color: #1B5E20; background-color: rgba(27,94,32,0.1); border-radius: 9999px; margin-bottom: 1.5rem; }
+.ess-hero-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+@media (min-width: 1024px) { .ess-hero-title { font-size: 3.75rem; } }
+.ess-text-accent { color: #7c8c1a; }
+.ess-text-primary { color: #1B5E20; }
+.ess-text-secondary { color: #1976D2; }
+.ess-hero-subtitle { font-size: 1.125rem; color: #718096; margin-bottom: 2rem; max-width: 42rem; margin-left: auto; margin-right: auto; }
+@media (min-width: 1024px) { .ess-hero-subtitle { font-size: 1.25rem; } }
+.ess-hero-buttons { display: flex; flex-direction: column; gap: 1rem; justify-content: center; margin-bottom: 3rem; }
+@media (min-width: 640px) { .ess-hero-buttons { flex-direction: row; } }
+.ess-hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 42rem; margin: 0 auto; }
+.ess-stat-card { background: #fff; padding: 1.5rem; border-radius: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.ess-stat-value { font-size: 2rem; font-weight: 700; }
+@media (min-width: 1024px) { .ess-stat-value { font-size: 2.5rem; } }
+.ess-stat-label { font-size: 0.875rem; color: #718096; }
+
+/* Trust Section */
+.ess-trust { padding: 4rem 0; background-color: #1B5E20; color: #fff; }
+.ess-trust-header { text-align: center; margin-bottom: 2rem; }
+.ess-trust-header .ess-section-title { color: #fff; }
+.ess-trust-header .ess-section-subtitle { color: rgba(255,255,255,0.8); }
+.ess-logo-carousel { overflow: hidden; margin-bottom: 3rem; }
+.ess-logo-track { display: flex; gap: 3rem; animation: essScroll 30s linear infinite; }
+@keyframes essScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.ess-logo-item { flex-shrink: 0; font-size: 1.25rem; font-weight: 600; opacity: 0.8; white-space: nowrap; }
+.ess-trust-indicators { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 56rem; margin: 0 auto; }
+@media (min-width: 768px) { .ess-trust-indicators { grid-template-columns: repeat(3, 1fr); } }
+.ess-trust-item { display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 0.75rem; }
+.ess-trust-icon { font-size: 1.5rem; }
+.ess-trust-text strong { display: block; }
+.ess-trust-text span { font-size: 0.875rem; opacity: 0.8; }
+
+/* Timeline */
+.ess-timeline { max-width: 48rem; margin: 0 auto; }
+.ess-timeline-item { display: flex; gap: 1.5rem; padding-bottom: 2rem; position: relative; }
+.ess-timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 1.5rem; top: 3.5rem; bottom: 0; width: 2px; background: #e2e8f0; }
+.ess-timeline-icon { width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; background: #1B5E20; color: #fff; border-radius: 50%; font-size: 1.25rem; flex-shrink: 0; }
+.ess-timeline-content h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+.ess-timeline-duration { display: inline-block; font-size: 0.75rem; font-weight: 500; color: #1976D2; background: rgba(25,118,210,0.1); padding: 0.25rem 0.75rem; border-radius: 9999px; margin-bottom: 0.5rem; }
+.ess-timeline-content p { color: #718096; }
+
+/* Benefits */
+.ess-benefits { padding: 5rem 0; background: #f7fafc; }
+.ess-benefits-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 768px) { .ess-benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .ess-benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+.ess-benefit-card { background: #fff; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: all 0.3s; }
+.ess-benefit-card:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transform: translateY(-4px); }
+.ess-benefit-icon { width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; border-radius: 0.75rem; margin-bottom: 1rem; font-size: 1.5rem; }
+.ess-benefit-icon.bg-primary { background: rgba(27,94,32,0.1); }
+.ess-benefit-icon.bg-secondary { background: rgba(25,118,210,0.1); }
+.ess-benefit-icon.bg-accent { background: rgba(205,220,57,0.2); }
+.ess-benefit-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.ess-benefit-card p { color: #718096; }
+
+/* Testimonials */
+.ess-testimonials { padding: 5rem 0; }
+.ess-testimonials-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 1024px) { .ess-testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+.ess-testimonial-card { background: #fff; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.ess-testimonial-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.ess-quote-icon { font-size: 2rem; color: #1B5E20; font-weight: 700; line-height: 1; }
+.ess-testimonial-metric { font-size: 0.75rem; font-weight: 500; color: #1976D2; background: rgba(25,118,210,0.1); padding: 0.25rem 0.75rem; border-radius: 9999px; }
+.ess-testimonial-quote { font-style: italic; color: #718096; margin-bottom: 1rem; }
+.ess-testimonial-author { margin-bottom: 1rem; }
+.ess-testimonial-author strong { display: block; }
+.ess-testimonial-author span { font-size: 0.875rem; color: #718096; }
+.ess-testimonial-value { font-size: 1.125rem; font-weight: 700; color: #1B5E20; }
+
+/* Pricing */
+.ess-pricing { padding: 5rem 0; background: #f7fafc; }
+.ess-pricing-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 72rem; margin: 0 auto 3rem; }
+@media (min-width: 1024px) { .ess-pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+.ess-pricing-card { background: #fff; padding: 2rem; border-radius: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: relative; }
+.ess-pricing-card-featured { border-color: #1B5E20; border-width: 2px; transform: scale(1.02); }
+@media (min-width: 1024px) { .ess-pricing-card-featured { transform: scale(1.05); } }
+.ess-pricing-badge { position: absolute; top: -0.75rem; left: 50%; transform: translateX(-50%); background: #1B5E20; color: #fff; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 9999px; }
+.ess-pricing-header h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.ess-pricing-target { color: #718096; font-size: 0.875rem; margin-bottom: 1rem; }
+.ess-pricing-duration { display: inline-block; font-size: 0.875rem; font-weight: 500; color: #1976D2; background: rgba(25,118,210,0.1); padding: 0.5rem 1rem; border-radius: 0.75rem; margin-bottom: 1.5rem; }
+.ess-pricing-features { list-style: none; margin-bottom: 1.5rem; }
+.ess-pricing-features li { padding: 0.5rem 0; color: #718096; font-size: 0.875rem; }
+.ess-pricing-enterprise { text-align: center; max-width: 36rem; margin: 0 auto; padding: 2rem; background: #fff; border-radius: 1rem; border: 1px solid #e2e8f0; }
+.ess-pricing-enterprise h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.ess-pricing-enterprise p { color: #718096; margin-bottom: 1rem; }
+
+/* Contact */
+.ess-contact { padding: 5rem 0; }
+.ess-contact-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 64rem; margin: 0 auto; }
+@media (min-width: 768px) { .ess-contact-grid { grid-template-columns: 1fr 2fr; } }
+.ess-contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+.ess-contact-item { display: flex; gap: 1rem; }
+.ess-contact-icon { font-size: 1.5rem; }
+.ess-contact-item strong { display: block; margin-bottom: 0.25rem; }
+.ess-contact-item p { color: #718096; }
+.ess-contact-form { background: #fff; padding: 2rem; border-radius: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.ess-form-row { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1rem; }
+@media (min-width: 640px) { .ess-form-row { grid-template-columns: 1fr 1fr; } }
+.ess-form-group { margin-bottom: 1rem; }
+.ess-form-group:last-child { margin-bottom: 1.5rem; }
+.ess-form-group label { display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem; }
+.ess-form-group input, .ess-form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.75rem; font-size: 1rem; font-family: inherit; transition: all 0.3s; }
+.ess-form-group input:focus, .ess-form-group textarea:focus { outline: none; border-color: #1B5E20; box-shadow: 0 0 0 3px rgba(27,94,32,0.1); }
+
+/* FAQ */
+.ess-faq { padding: 5rem 0; background: #f7fafc; }
+.ess-faq-list { max-width: 48rem; margin: 0 auto; }
+.ess-faq-item { background: #fff; margin-bottom: 0.5rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; overflow: hidden; }
+.ess-faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: none; border: none; font-size: 1rem; font-weight: 500; text-align: left; cursor: pointer; transition: all 0.3s; }
+.ess-faq-question:hover { background: #f7fafc; }
+.ess-faq-icon { font-size: 1.5rem; font-weight: 300; transition: transform 0.3s; }
+.ess-faq-item.active .ess-faq-icon { transform: rotate(45deg); }
+.ess-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.ess-faq-item.active .ess-faq-answer { max-height: 200px; }
+.ess-faq-answer p { padding: 0 1.5rem 1rem; color: #718096; }
+
+/* Footer */
+.ess-footer-cta { background: linear-gradient(135deg, #1B5E20, #1976D2); padding: 4rem 0; text-align: center; color: #fff; }
+.ess-footer-cta h2 { font-size: 1.875rem; margin-bottom: 1rem; }
+@media (min-width: 1024px) { .ess-footer-cta h2 { font-size: 2.25rem; } }
+.ess-footer-cta p { font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem; }
+.ess-footer-content { background: #f7fafc; border-top: 1px solid #e2e8f0; padding: 3rem 0; }
+.ess-footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
+@media (min-width: 768px) { .ess-footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+.ess-footer-logo { height: 3rem; width: auto; margin-bottom: 1rem; }
+.ess-footer-brand p { color: #718096; font-size: 0.875rem; margin-bottom: 1rem; max-width: 24rem; }
+.ess-microsoft-badge { height: 6rem; width: auto; }
+.ess-footer-links h4, .ess-footer-contact h4 { font-size: 1rem; margin-bottom: 1rem; }
+.ess-footer-links ul, .ess-footer-contact ul { list-style: none; }
+.ess-footer-links li, .ess-footer-contact li { margin-bottom: 0.5rem; }
+.ess-footer-links a { color: #718096; font-size: 0.875rem; transition: color 0.3s; }
+.ess-footer-links a:hover { color: #1B5E20; }
+.ess-footer-contact li { color: #718096; font-size: 0.875rem; }
+.ess-footer-bottom { border-top: 1px solid #e2e8f0; padding-top: 2rem; text-align: center; }
+.ess-footer-bottom p { color: #718096; font-size: 0.875rem; }
+
+/* Chatbot */
+#ess-chatbot-container { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 1000; font-family: 'Inter', sans-serif; }
+.ess-chatbot-toggle { width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #1B5E20; color: #fff; border: none; cursor: pointer; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: all 0.3s; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+.ess-chatbot-toggle:hover { transform: scale(1.1); }
+.ess-chatbot-toggle .ess-close-icon { display: none; }
+.ess-chatbot-toggle.active .ess-chat-icon { display: none; }
+.ess-chatbot-toggle.active .ess-close-icon { display: block; }
+.ess-chatbot-window { position: absolute; bottom: 4.5rem; right: 0; width: 360px; max-width: calc(100vw - 2rem); background: #fff; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; display: none; flex-direction: column; overflow: hidden; }
+.ess-chatbot-window.active { display: flex; }
+.ess-chatbot-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: #1B5E20; color: #fff; }
+.ess-chatbot-header h3 { font-size: 0.875rem; font-weight: 600; }
+.ess-chatbot-close { background: none; border: none; color: #fff; cursor: pointer; font-size: 1.25rem; opacity: 0.8; }
+.ess-chatbot-close:hover { opacity: 1; }
+.ess-chatbot-messages { flex: 1; overflow-y: auto; padding: 1rem; max-height: 300px; min-height: 200px; }
+.ess-message { margin-bottom: 1rem; max-width: 85%; }
+.ess-bot-message { background: #f7fafc; padding: 0.75rem; border-radius: 0.75rem; border-top-left-radius: 0; }
+.ess-user-message { background: #1B5E20; color: #fff; padding: 0.75rem; border-radius: 0.75rem; border-top-right-radius: 0; margin-left: auto; }
+.ess-message p { font-size: 0.875rem; line-height: 1.5; margin: 0; }
+.ess-booking-container { padding: 1rem; border-top: 1px solid #e2e8f0; }
+.ess-chatbot-input-area { padding: 1rem; border-top: 1px solid #e2e8f0; }
+#ess-schedule-btn { width: 100%; margin-bottom: 0.75rem; }
+.ess-input-row { display: flex; gap: 0.5rem; }
+#ess-chatbot-input { flex: 1; padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.75rem; font-size: 0.875rem; }
+#ess-chatbot-input:focus { outline: none; border-color: #1B5E20; }
+.ess-typing-indicator { display: flex; gap: 4px; padding: 0.75rem; }
+.ess-typing-indicator span { width: 8px; height: 8px; background: #718096; border-radius: 50%; animation: essBounce 1.4s infinite ease-in-out; }
+.ess-typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+.ess-typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+@keyframes essBounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+</style>
+
+<div class="ess-copilot-page">
+    <!-- Header -->
+    <header class="ess-header">
+        <div class="ess-container">
+            <div class="ess-header-content">
+                <div class="ess-header-left">
+                    <a href="/" class="ess-logo-link">
+                        <img src="YOUR_LOGO_URL" alt="ESS" class="ess-logo">
+                    </a>
+                    <nav class="ess-nav">
+                        <a href="#ess-overview" class="ess-nav-link">Overview</a>
+                        <a href="#ess-benefits" class="ess-nav-link">Benefits</a>
+                        <a href="#ess-pricing" class="ess-nav-link">Pricing</a>
+                    </nav>
+                </div>
+                <button class="ess-btn ess-btn-cta">Enroll Today</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="ess-hero" id="ess-hero">
+        <div class="ess-hero-bg"></div>
+        <div class="ess-container">
+            <div class="ess-hero-content">
+                <span class="ess-hero-badge">Microsoft MVP-Led Training</span>
+                <h1 class="ess-hero-title">
+                    Stop Paying for Copilot.<br>
+                    <span class="ess-text-accent">Start Profiting from It.</span>
+                </h1>
+                <p class="ess-hero-subtitle">
+                    Most companies see just 20% Copilot adoption. ESS Copilot Academy delivers 
+                    <strong>85% adoption in 30 days</strong> with measurable productivity gains.
+                </p>
+                <div class="ess-hero-buttons">
+                    <a href="#ess-contact" class="ess-btn ess-btn-cta ess-btn-xl">Enroll in Copilot Academy Today</a>
+                    <a href="#ess-pricing" class="ess-btn ess-btn-outline ess-btn-xl">View Plans & Pricing</a>
+                </div>
+                <div class="ess-hero-stats">
+                    <div class="ess-stat-card">
+                        <div class="ess-stat-value ess-text-primary">353%</div>
+                        <div class="ess-stat-label">Projected ROI</div>
+                    </div>
+                    <div class="ess-stat-card">
+                        <div class="ess-stat-value ess-text-secondary">35%</div>
+                        <div class="ess-stat-label">Productivity Increase</div>
+                    </div>
+                    <div class="ess-stat-card">
+                        <div class="ess-stat-value ess-text-accent">85%</div>
+                        <div class="ess-stat-label">Adoption Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="ess-trust">
+        <div class="ess-container">
+            <div class="ess-trust-header">
+                <h2 class="ess-section-title">Trusted by Industry Leaders Across Key Sectors</h2>
+                <p class="ess-section-subtitle">Join the companies that have transformed their Microsoft 365 Copilot adoption</p>
+            </div>
+            <div class="ess-logo-carousel">
+                <div class="ess-logo-track">
+                    <div class="ess-logo-item">JIFFY LUBE</div>
+                    <div class="ess-logo-item">ARC</div>
+                    <div class="ess-logo-item">PURAKAL</div>
+                    <div class="ess-logo-item">PREZENT</div>
+                    <div class="ess-logo-item">SOTC</div>
+                    <div class="ess-logo-item">BP</div>
+                    <div class="ess-logo-item">YELLOW</div>
+                    <div class="ess-logo-item">EMBLEM</div>
+                    <div class="ess-logo-item">JIFFY LUBE</div>
+                    <div class="ess-logo-item">ARC</div>
+                    <div class="ess-logo-item">PURAKAL</div>
+                    <div class="ess-logo-item">PREZENT</div>
+                </div>
+            </div>
+            <div class="ess-trust-indicators">
+                <div class="ess-trust-item">
+                    <div class="ess-trust-icon">🛡️</div>
+                    <div class="ess-trust-text">
+                        <strong>Enterprise-Grade Training</strong>
+                        <span>Designed for organizations of all sizes</span>
+                    </div>
+                </div>
+                <div class="ess-trust-item">
+                    <div class="ess-trust-icon">🏆</div>
+                    <div class="ess-trust-text">
+                        <strong>Microsoft MVP-Led</strong>
+                        <span>Expert trainers with deep product knowledge</span>
+                    </div>
+                </div>
+                <div class="ess-trust-item">
+                    <div class="ess-trust-icon">📈</div>
+                    <div class="ess-trust-text">
+                        <strong>Proven Results</strong>
+                        <span>353% ROI and 85% adoption rates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="ess-section" id="ess-overview">
+        <div class="ess-container">
+            <div class="ess-section-header">
+                <h2 class="ess-section-title">ESS Copilot Academy: Your Adoption Roadmap</h2>
+                <p class="ess-section-subtitle">A structured, MVP-led training experience designed to maximize your Microsoft 365 Copilot ROI</p>
+            </div>
+            <div class="ess-timeline">
+                <div class="ess-timeline-item">
+                    <div class="ess-timeline-icon">🎯</div>
+                    <div class="ess-timeline-content">
+                        <h3>Discovery & Assessment</h3>
+                        <span class="ess-timeline-duration">Week 1</span>
+                        <p>We assess your current Copilot deployment, identify adoption barriers, and create a customized training roadmap.</p>
+                    </div>
+                </div>
+                <div class="ess-timeline-item">
+                    <div class="ess-timeline-icon">📚</div>
+                    <div class="ess-timeline-content">
+                        <h3>Role-Based Training</h3>
+                        <span class="ess-timeline-duration">Weeks 2-3</span>
+                        <p>Interactive workshops tailored to each department with hands-on prompt engineering playbooks.</p>
+                    </div>
+                </div>
+                <div class="ess-timeline-item">
+                    <div class="ess-timeline-icon">🚀</div>
+                    <div class="ess-timeline-content">
+                        <h3>Hands-On Labs</h3>
+                        <span class="ess-timeline-duration">Week 4</span>
+                        <p>Practical application sessions where teams apply Copilot to real work scenarios.</p>
+                    </div>
+                </div>
+                <div class="ess-timeline-item">
+                    <div class="ess-timeline-icon">📊</div>
+                    <div class="ess-timeline-content">
+                        <h3>Coaching & Optimization</h3>
+                        <span class="ess-timeline-duration">Weeks 5-6</span>
+                        <p>Dedicated coaching, performance tracking, and ongoing optimization support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="ess-benefits" id="ess-benefits">
+        <div class="ess-container">
+            <div class="ess-section-header">
+                <h2 class="ess-section-title">Why Choose Copilot Academy?</h2>
+                <p class="ess-section-subtitle">We deliver more than training—we provide a complete transformation of how your teams work with AI.</p>
+            </div>
+            <div class="ess-benefits-grid">
+                <div class="ess-benefit-card">
+                    <div class="ess-benefit-icon bg-primary">🏆</div>
+                    <h3>Expert Trainers</h3>
+                    <p>Microsoft MVP-led workshops with real-world expertise and deep product knowledge</p>
+                </div>
+                <div class="ess-benefit-card">
+                    <div class="ess-benefit-icon bg-secondary">📖</div>
+                    <h3>Real-World Experiences</h3>
+                    <p>Practical, hands-on training with custom prompt-writing playbooks for each role</p>
+                </div>
+                <div class="ess-benefit-card">
+                    <div class="ess-benefit-icon bg-accent">📈</div>
+                    <h3>Productivity Boost</h3>
+                    <p>Achieve a 35% increase in productivity with effective Copilot usage</p>
+                </div>
+                <div class="ess-benefit-card">
+                    <div class="ess-benefit-icon bg-primary">💡</div>
+                    <h3>Lightbulb Learning</h3>
+                    <p>Flexible, engaging approach that combines relevance with memorable moments</p>
+                </div>
+                <div class="ess-benefit-card">
+                    <div class="ess-benefit-icon bg-secondary">🎧</div>
+                    <h3>2 Weeks Dedicated Coaching</h3>
+                    <p>Post-deployment coaching and 24/7 support to ensure lasting adoption</p>
+                </div>
+                <div class="ess-benefit-card">
+                    <div class="ess-benefit-icon bg-accent">⚡</div>
+                    <h3>Fast ROI</h3>
+                    <p>See measurable results in adoption and productivity within 30 days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="ess-testimonials">
+        <div class="ess-container">
+            <div class="ess-section-header">
+                <h2 class="ess-section-title">What Our Clients Say</h2>
+                <p class="ess-section-subtitle">Hear from leaders who transformed their Copilot adoption</p>
+            </div>
+            <div class="ess-testimonials-grid">
+                <div class="ess-testimonial-card">
+                    <div class="ess-testimonial-header">
+                        <div class="ess-quote-icon">"</div>
+                        <span class="ess-testimonial-metric">Deployment Success</span>
+                    </div>
+                    <p class="ess-testimonial-quote">"We were skeptical about adoption rates after our initial rollout stalled. ESS cut through the noise with role-specific training that actually stuck. Within 30 days, our teams went from avoiding Copilot to asking for more features."</p>
+                    <div class="ess-testimonial-author">
+                        <strong>Sarah Chen</strong>
+                        <span>VP of Digital Transformation, Fortune 500 Healthcare</span>
+                    </div>
+                    <div class="ess-testimonial-value">20% → 85% adoption in 30 days</div>
+                </div>
+                <div class="ess-testimonial-card">
+                    <div class="ess-testimonial-header">
+                        <div class="ess-quote-icon">"</div>
+                        <span class="ess-testimonial-metric">Time-to-Value</span>
+                    </div>
+                    <p class="ess-testimonial-quote">"The team finally got it. After months of low engagement, ESS Copilot Academy made Copilot click for our IT staff. The hands-on labs were the turning point—we saw the needle move within the first week."</p>
+                    <div class="ess-testimonial-author">
+                        <strong>Michael Torres</strong>
+                        <span>Director of IT Operations, Global Manufacturing</span>
+                    </div>
+                    <div class="ess-testimonial-value">35% productivity increase</div>
+                </div>
+                <div class="ess-testimonial-card">
+                    <div class="ess-testimonial-header">
+                        <div class="ess-quote-icon">"</div>
+                        <span class="ess-testimonial-metric">ROI Achievement</span>
+                    </div>
+                    <p class="ess-testimonial-quote">"ESS Copilot Academy gave me the data I needed to justify our Copilot investment to the board. The ROI tracking and adoption metrics took the guesswork out of measuring success. No more defending a hunch—I had proof."</p>
+                    <div class="ess-testimonial-author">
+                        <strong>Jennifer Walsh</strong>
+                        <span>CIO, Mid-Market Financial Services</span>
+                    </div>
+                    <div class="ess-testimonial-value">353% projected 3-year ROI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="ess-pricing" id="ess-pricing">
+        <div class="ess-container">
+            <div class="ess-section-header">
+                <h2 class="ess-section-title">Choose Your Copilot Academy Package</h2>
+                <p class="ess-section-subtitle">Flexible training options designed to fit your organization's needs and budget</p>
+            </div>
+            <div class="ess-pricing-grid">
+                <div class="ess-pricing-card">
+                    <div class="ess-pricing-header">
+                        <h3>Flight</h3>
+                        <p class="ess-pricing-target">For small teams getting started</p>
+                    </div>
+                    <div class="ess-pricing-duration">1-Day Workshop</div>
+                    <ul class="ess-pricing-features">
+                        <li>✓ Half-day Copilot fundamentals</li>
+                        <li>✓ Basic prompt engineering</li>
+                        <li>✓ Up to 25 participants</li>
+                        <li>✓ Digital resource pack</li>
+                        <li>✓ Email support (30 days)</li>
+                    </ul>
+                    <a href="#ess-contact" class="ess-btn ess-btn-outline ess-btn-block">Get Started</a>
+                </div>
+                <div class="ess-pricing-card ess-pricing-card-featured">
+                    <div class="ess-pricing-badge">RECOMMENDED</div>
+                    <div class="ess-pricing-header">
+                        <h3>Full Adoption</h3>
+                        <p class="ess-pricing-target">For organizations seeking complete transformation</p>
+                    </div>
+                    <div class="ess-pricing-duration">6-Week Program</div>
+                    <ul class="ess-pricing-features">
+                        <li>✓ Complete 6-week curriculum</li>
+                        <li>✓ Role-based training modules</li>
+                        <li>✓ Custom prompt playbooks</li>
+                        <li>✓ Hands-on labs & workshops</li>
+                        <li>✓ 2 weeks dedicated coaching</li>
+                        <li>✓ ROI tracking dashboard</li>
+                        <li>✓ Unlimited participants</li>
+                        <li>✓ 24/7 support (90 days)</li>
+                    </ul>
+                    <a href="#ess-contact" class="ess-btn ess-btn-cta ess-btn-block">Secure Your Copilot ROI Session</a>
+                </div>
+                <div class="ess-pricing-card">
+                    <div class="ess-pricing-header">
+                        <h3>Squadron</h3>
+                        <p class="ess-pricing-target">For departments needing focused training</p>
+                    </div>
+                    <div class="ess-pricing-duration">2-Week Intensive</div>
+                    <ul class="ess-pricing-features">
+                        <li>✓ Department-specific training</li>
+                        <li>✓ Advanced prompt engineering</li>
+                        <li>✓ Up to 50 participants</li>
+                        <li>✓ Custom use case development</li>
+                        <li>✓ 1 week coaching support</li>
+                    </ul>
+                    <a href="#ess-contact" class="ess-btn ess-btn-outline ess-btn-block">Learn More</a>
+                </div>
+            </div>
+            <div class="ess-pricing-enterprise">
+                <h3>Need a Custom Solution?</h3>
+                <p>We offer enterprise packages for large-scale deployments with custom curriculum design, dedicated success managers, and flexible scheduling.</p>
+                <a href="#ess-contact" class="ess-btn ess-btn-secondary">Contact Us for Enterprise Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="ess-contact" id="ess-contact">
+        <div class="ess-container">
+            <div class="ess-section-header">
+                <h2 class="ess-section-title">Ready to Transform Your Copilot Adoption?</h2>
+                <p class="ess-section-subtitle">Get in touch with our team to discuss your training needs</p>
+            </div>
+            <div class="ess-contact-grid">
+                <div class="ess-contact-info">
+                    <div class="ess-contact-item">
+                        <div class="ess-contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>copilotacademy@software-dudes.ai</p>
+                        </div>
+                    </div>
+                    <div class="ess-contact-item">
+                        <div class="ess-contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>(888)-732-6521</p>
+                        </div>
+                    </div>
+                    <div class="ess-contact-item">
+                        <div class="ess-contact-icon">🕐</div>
+                        <div>
+                            <strong>Support Hours</strong>
+                            <p>Mon-Fri: 8AM - 6PM EST</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="ess-contact-form" id="essContactForm">
+                    <div class="ess-form-row">
+                        <div class="ess-form-group">
+                            <label for="essName">Full Name *</label>
+                            <input type="text" id="essName" name="name" required>
+                        </div>
+                        <div class="ess-form-group">
+                            <label for="essEmail">Email *</label>
+                            <input type="email" id="essEmail" name="email" required>
+                        </div>
+                    </div>
+                    <div class="ess-form-row">
+                        <div class="ess-form-group">
+                            <label for="essPhone">Phone</label>
+                            <input type="tel" id="essPhone" name="phone">
+                        </div>
+                        <div class="ess-form-group">
+                            <label for="essCompany">Company</label>
+                            <input type="text" id="essCompany" name="company">
+                        </div>
+                    </div>
+                    <div class="ess-form-group">
+                        <label for="essMessage">Message *</label>
+                        <textarea id="essMessage" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="ess-btn ess-btn-cta ess-btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="ess-faq">
+        <div class="ess-container">
+            <div class="ess-section-header">
+                <h2 class="ess-section-title">Frequently Asked Questions about Copilot Adoption</h2>
+                <p class="ess-section-subtitle">Get answers to common questions about the ESS Copilot Academy</p>
+            </div>
+            <div class="ess-faq-list">
+                <div class="ess-faq-item">
+                    <button class="ess-faq-question">
+                        <span>Do we need a specific license to use Copilot Academy?</span>
+                        <span class="ess-faq-icon">+</span>
+                    </button>
+                    <div class="ess-faq-answer">
+                        <p>Yes, employees must have an eligible Microsoft 365 license (E3/E5/Business Premium/Standard) and the Copilot add-on license to participate and benefit from the training.</p>
+                    </div>
+                </div>
+                <div class="ess-faq-item">
+                    <button class="ess-faq-question">
+                        <span>How long does it take to see results (ROI)?</span>
+                        <span class="ess-faq-icon">+</span>
+                    </button>
+                    <div class="ess-faq-answer">
+                        <p>Our clients see results immediately. User adoption rates typically jump from 20% to over 85% within 30 days of completing the Academy, leading directly to the projected 353% ROI we help you track.</p>
+                    </div>
+                </div>
+                <div class="ess-faq-item">
+                    <button class="ess-faq-question">
+                        <span>Does the training include prompt engineering?</span>
+                        <span class="ess-faq-icon">+</span>
+                    </button>
+                    <div class="ess-faq-answer">
+                        <p>Yes. The training is heavily focused on role-based prompt engineering playbooks, which is the key skill for maximizing Copilot's productivity features.</p>
+                    </div>
+                </div>
+                <div class="ess-faq-item">
+                    <button class="ess-faq-question">
+                        <span>How does Copilot handle our company's sensitive data?</span>
+                        <span class="ess-faq-icon">+</span>
+                    </button>
+                    <div class="ess-faq-answer">
+                        <p>Copilot inherits all of your organization's existing security permissions and compliance settings within Microsoft 365. It will only access data that the user already has permission to view.</p>
+                    </div>
+                </div>
+                <div class="ess-faq-item">
+                    <button class="ess-faq-question">
+                        <span>Is the Academy available for all departments?</span>
+                        <span class="ess-faq-icon">+</span>
+                    </button>
+                    <div class="ess-faq-answer">
+                        <p>Yes, the Academy includes specific role-based sessions tailored to address the unique use cases for departments like HR, Finance, Sales, and IT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="ess-footer-cta">
+            <div class="ess-container">
+                <h2>Ready to Transform Your Copilot Adoption?</h2>
+                <p>Join Fortune 500 companies and start seeing results in 30 days</p>
+                <a href="#ess-contact" class="ess-btn ess-btn-white ess-btn-xl">Enroll in Copilot Academy Today</a>
+            </div>
+        </div>
+        <div class="ess-footer-content">
+            <div class="ess-container">
+                <div class="ess-footer-grid">
+                    <div class="ess-footer-brand">
+                        <img src="YOUR_LOGO_URL" alt="ESS" class="ess-footer-logo">
+                        <p>Enterprises Software Solutions - Empowering organizations with expert & MVP-led implementation, training and adoption strategies for Microsoft technologies.</p>
+                        <img src="YOUR_MICROSOFT_PARTNER_BADGE_URL" alt="Microsoft Solutions Partner" class="ess-microsoft-badge">
+                    </div>
+                    <div class="ess-footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#ess-overview">Program Overview</a></li>
+                            <li><a href="#ess-benefits">Benefits</a></li>
+                            <li><a href="#ess-pricing">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="ess-footer-contact">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>Email: copilotacademy@software-dudes.ai</li>
+                            <li>Phone: (888)-732-6521</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ess-footer-bottom">
+                    <p>&copy; 2025 Enterprise Software Solutions. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Chatbot Widget -->
+<div id="ess-chatbot-container">
+    <button id="ess-chatbot-toggle" class="ess-chatbot-toggle">
+        <span class="ess-chat-icon">💬</span>
+        <span class="ess-close-icon">✕</span>
+    </button>
+    <div id="ess-chatbot-window" class="ess-chatbot-window">
+        <div class="ess-chatbot-header">
+            <h3>ESS Copilot Academy Assistant</h3>
+            <button id="ess-chatbot-close" class="ess-chatbot-close">✕</button>
+        </div>
+        <div id="ess-chatbot-messages" class="ess-chatbot-messages">
+            <div class="ess-message ess-bot-message">
+                <p>Hi! 👋 I'm the ESS Copilot Academy Assistant. I can help you with questions about our training programs, pricing, and how we can help your team master Microsoft 365 Copilot. How can I assist you today?</p>
+            </div>
+        </div>
+        <div id="ess-booking-container" class="ess-booking-container" style="display: none;">
+            <iframe id="ess-booking-iframe" src="" width="100%" height="400" frameborder="0"></iframe>
+            <button id="ess-close-booking" class="ess-btn ess-btn-outline ess-btn-sm">Close Calendar</button>
+        </div>
+        <div class="ess-chatbot-input-area">
+            <button id="ess-schedule-btn" class="ess-btn ess-btn-secondary ess-btn-sm">📅 Schedule a Call</button>
+            <div class="ess-input-row">
+                <input type="text" id="ess-chatbot-input" placeholder="Type your question...">
+                <button id="ess-send-btn" class="ess-btn ess-btn-cta ess-btn-sm">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    // FAQ Accordion
+    document.querySelectorAll('.ess-faq-item').forEach(function(item) {
+        item.querySelector('.ess-faq-question').addEventListener('click', function() {
+            document.querySelectorAll('.ess-faq-item').forEach(function(other) {
+                if (other !== item) other.classList.remove('active');
+            });
+            item.classList.toggle('active');
+        });
+    });
+
+    // Contact Form
+    var contactForm = document.getElementById('essContactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = {
+                name: document.getElementById('essName').value,
+                email: document.getElementById('essEmail').value,
+                phone: document.getElementById('essPhone').value || null,
+                company: document.getElementById('essCompany').value || null,
+                message: document.getElementById('essMessage').value
+            };
+            // Replace with your webhook URL
+            var FORM_WEBHOOK_URL = 'YOUR_FORM_WEBHOOK_URL';
+            fetch(FORM_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            }).then(function(res) {
+                if (res.ok) {
+                    alert('Thank you! We\'ll be in touch soon.');
+                    contactForm.reset();
+                } else {
+                    alert('Error submitting. Please try again.');
+                }
+            }).catch(function() {
+                alert('Error submitting. Please try again.');
+            });
+        });
+    }
+
+    // Chatbot
+    var ZOHO_BOOKING_URL = 'https://sales-enterprisessoftwaresolutions98.zohobookings.com/portal-embed#/4630761000000794002';
+    var CHAT_API_URL = 'YOUR_CHAT_API_URL';
+    var ZOHO_WEBHOOK_URL = 'YOUR_ZOHO_WEBHOOK_URL';
+    var SCHEDULING_KEYWORDS = ['yes', 'book', 'schedule a call', 'talk to someone', 'schedule', 'speak with', 'meeting', 'appointment'];
+
+    var isOpen = false;
+    var messages = [];
+    var leadData = { name: null, email: null, phone: null, company: null };
+    var bookingClicked = false;
+    var bookingCompleted = false;
+    var awaitingLeadInfo = null;
+
+    var toggle = document.getElementById('ess-chatbot-toggle');
+    var chatWindow = document.getElementById('ess-chatbot-window');
+    var closeBtn = document.getElementById('ess-chatbot-close');
+    var input = document.getElementById('ess-chatbot-input');
+    var sendBtn = document.getElementById('ess-send-btn');
+    var scheduleBtn = document.getElementById('ess-schedule-btn');
+    var messagesEl = document.getElementById('ess-chatbot-messages');
+    var bookingContainer = document.getElementById('ess-booking-container');
+    var bookingIframe = document.getElementById('ess-booking-iframe');
+    var closeBookingBtn = document.getElementById('ess-close-booking');
+
+    function toggleChat() {
+        isOpen = !isOpen;
+        toggle.classList.toggle('active', isOpen);
+        chatWindow.classList.toggle('active', isOpen);
+    }
+
+    toggle.addEventListener('click', toggleChat);
+    closeBtn.addEventListener('click', toggleChat);
+
+    function addMessage(content, isUser) {
+        var div = document.createElement('div');
+        div.className = 'ess-message ' + (isUser ? 'ess-user-message' : 'ess-bot-message');
+        div.innerHTML = '<p>' + content + '</p>';
+        messagesEl.appendChild(div);
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+        messages.push({ role: isUser ? 'user' : 'assistant', content: content });
+    }
+
+    function showTyping() {
+        var div = document.createElement('div');
+        div.className = 'ess-message ess-bot-message ess-typing';
+        div.innerHTML = '<div class="ess-typing-indicator"><span></span><span></span><span></span></div>';
+        messagesEl.appendChild(div);
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+        return div;
+    }
+
+    function extractLeadInfo(msg) {
+        var emailMatch = msg.match(/[\w.-]+@[\w.-]+\.\w+/);
+        if (emailMatch) leadData.email = emailMatch[0];
+        var phoneMatch = msg.match(/[\d\s()+-]{10,}/);
+        if (phoneMatch) leadData.phone = phoneMatch[0].trim();
+    }
+
+    function hasSchedulingIntent(msg) {
+        var lower = msg.toLowerCase();
+        return SCHEDULING_KEYWORDS.some(function(kw) { return lower.indexOf(kw) !== -1; });
+    }
+
+    function openBooking() {
+        bookingClicked = true;
+        bookingIframe.src = ZOHO_BOOKING_URL;
+        bookingContainer.style.display = 'block';
+        addMessage("Great! I've opened our booking calendar below. Please select a time that works for you.", false);
+    }
+
+    function closeBooking(completed) {
+        bookingContainer.style.display = 'none';
+        bookingIframe.src = '';
+        if (completed) {
+            bookingCompleted = true;
+            addMessage("You're all set — looking forward to speaking with you!", false);
+        } else {
+            addMessage("No problem — let me know if you need another time or have any questions.", false);
+        }
+    }
+
+    closeBookingBtn.addEventListener('click', function() { closeBooking(false); });
+    scheduleBtn.addEventListener('click', openBooking);
+
+    function sendMessage(userMsg) {
+        if (!userMsg.trim()) return;
+        extractLeadInfo(userMsg);
+
+        if (awaitingLeadInfo === 'name') {
+            leadData.name = userMsg.trim();
+            awaitingLeadInfo = 'email';
+            addMessage(userMsg, true);
+            addMessage("Thanks! And what's your email address? (This helps us send you confirmation details)", false);
+            return;
+        }
+
+        if (awaitingLeadInfo === 'email') {
+            if (userMsg.indexOf('@') !== -1) {
+                leadData.email = userMsg.trim();
+                awaitingLeadInfo = null;
+                addMessage(userMsg, true);
+                openBooking();
+            } else if (userMsg.toLowerCase() === 'skip') {
+                awaitingLeadInfo = null;
+                addMessage(userMsg, true);
+                openBooking();
+            } else {
+                addMessage(userMsg, true);
+                addMessage("That doesn't look like a valid email. Please enter your email or type 'skip' to continue.", false);
+            }
+            return;
+        }
+
+        if (hasSchedulingIntent(userMsg)) {
+            addMessage(userMsg, true);
+            if (!leadData.name) {
+                awaitingLeadInfo = 'name';
+                addMessage("Before I open the calendar, could I get your name?", false);
+                return;
+            }
+            openBooking();
+            return;
+        }
+
+        addMessage(userMsg, true);
+        var typing = showTyping();
+
+        fetch(CHAT_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages: messages.map(function(m) { return { role: m.role, content: m.content }; }) })
+        }).then(function(res) {
+            typing.remove();
+            if (res.ok) {
+                return res.json().then(function(data) {
+                    addMessage(data.response || data.content || "I'm sorry, I couldn't process that. Please try again.", false);
+                });
+            } else {
+                addMessage("I'm having trouble connecting. Please try again or contact us at copilotacademy@software-dudes.ai", false);
+            }
+        }).catch(function() {
+            typing.remove();
+            addMessage("I'm having trouble connecting. Please try again or contact us at copilotacademy@software-dudes.ai", false);
+        });
+    }
+
+    sendBtn.addEventListener('click', function() {
+        var msg = input.value;
+        input.value = '';
+        sendMessage(msg);
+    });
+
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            var msg = input.value;
+            input.value = '';
+            sendMessage(msg);
+        }
+    });
+
+    function sendToZohoWebhook() {
+        if (ZOHO_WEBHOOK_URL === 'YOUR_ZOHO_WEBHOOK_URL') return;
+        fetch(ZOHO_WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: leadData.name,
+                email: leadData.email,
+                phone: leadData.phone,
+                company: leadData.company,
+                lead_source: 'Copilot Academy AI Agent',
+                page_url: window.location.href,
+                interested_in: 'Copilot Academy',
+                booking_clicked: bookingClicked,
+                booking_completed: bookingCompleted,
+                conversation_transcript: messages.map(function(m) { return m.role + ': ' + m.content; }).join('\n\n')
+            })
+        }).catch(function() {});
+    }
+
+    window.addEventListener('beforeunload', function() {
+        if (messages.length > 1) sendToZohoWebhook();
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#ess-"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+})();
+</script>
