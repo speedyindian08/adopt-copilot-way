@@ -35,6 +35,20 @@ export const HeroSection = () => {
             </Button>
           </div>
 
+          {/* AI Video Avatar */}
+          <div className="max-w-2xl mx-auto mb-12 animate-fade-in rounded-xl overflow-hidden shadow-lg border border-border" style={{ animationDelay: "0.35s" }}>
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://app.heygen.com/embeds/dbdc77926e154f2580f6e72087321de9-d7928e1b5e1041098777ffd20e13128a"
+                title="Quick Avatar Video"
+                frameBorder="0"
+                allow="encrypted-media; fullscreen;"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
           {/* Stat Strip */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
