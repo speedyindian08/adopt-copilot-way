@@ -45,14 +45,10 @@ export const ContactForm = () => {
     setIsLoading(true);
 
     try {
-      // Validate form data
       const validatedData = contactSchema.parse(formData);
 
-      // Zoho CRM Web-to-Lead endpoint
-      // The user will need to replace this with their actual Zoho form URL or webhook
-      const zohoWebhookUrl = "YOUR_ZOHO_WEBHOOK_URL"; // This should be configured by the user
+      const zohoWebhookUrl = "YOUR_ZOHO_WEBHOOK_URL";
 
-      // Prepare data in Zoho CRM format
       const zohoData = new URLSearchParams({
         "First Name": validatedData.firstName,
         "Last Name": validatedData.lastName,
@@ -63,8 +59,6 @@ export const ContactForm = () => {
         "Lead Source": "Copilot Academy Landing Page",
       });
 
-      // Note: In production, this should be sent through a backend endpoint
-      // to avoid CORS issues and keep the webhook URL secure
       const response = await fetch(zohoWebhookUrl, {
         method: "POST",
         headers: {
@@ -76,10 +70,9 @@ export const ContactForm = () => {
       if (response.ok) {
         toast({
           title: "Message Sent Successfully!",
-          description: "Thank you for your interest. Our team will contact you shortly.",
+          description: "Thank you for your interest. Our team will contact you within 24 hours.",
         });
 
-        // Reset form
         setFormData({
           firstName: "",
           lastName: "",
@@ -118,10 +111,10 @@ export const ContactForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Stop Guessing. Start Measuring. Guarantee Your Copilot ROI.
+              Start Your Secure Copilot Plan
             </h2>
             <p className="text-xl text-muted-foreground">
-              Contact us to discuss your Copilot Academy needs and get a custom quote for your organization
+              Request your Copilot Governance Blueprint — a no-obligation, 30-minute strategic session focused on your organization's risks and opportunities.
             </p>
           </div>
 
@@ -130,10 +123,13 @@ export const ContactForm = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-semibold text-foreground mb-6">
-                  Get in Touch
+                  Evaluate Your Copilot Readiness
                 </h3>
-                <p className="text-muted-foreground mb-8">
-                  Fill out the form and our team will get back to you within 24 hours. For urgent inquiries, please call us directly.
+                <p className="text-muted-foreground mb-4">
+                  Fill out the form and our advisory team will reach out within 24 hours with a personalized Copilot readiness assessment for your organization.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  Designed specifically for healthcare, financial services, and other regulated industries.
                 </p>
               </div>
 
@@ -144,7 +140,7 @@ export const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground">info@enterprise-software-solutions.com</p>
+                    <p className="text-muted-foreground">copilotacademy@software-dudes.ai</p>
                   </div>
                 </div>
 
@@ -154,7 +150,7 @@ export const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">(888)-732-6521</p>
                   </div>
                 </div>
 
@@ -249,7 +245,7 @@ export const ContactForm = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Your Company Inc."
+                    placeholder="Your Organization"
                     required
                     maxLength={200}
                   />
@@ -257,14 +253,14 @@ export const ContactForm = () => {
 
                 <div>
                   <Label htmlFor="message" className="mb-2 block">
-                    Message *
+                    Tell us about your Copilot goals *
                   </Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your Copilot Academy needs..."
+                    placeholder="What are your Copilot deployment goals, compliance concerns, or questions?"
                     required
                     rows={4}
                     maxLength={1000}
@@ -282,11 +278,11 @@ export const ContactForm = () => {
                   className="w-full"
                   disabled={isLoading}
                 >
-                  {isLoading ? "Booking..." : "Secure Your Copilot ROI Session"}
+                  {isLoading ? "Submitting..." : "Request Your Copilot Governance Blueprint"}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  By submitting this form, you agree to our privacy policy and terms of service.
+                  No obligation · 30-minute strategic session · Focused on your Copilot risks and opportunities
                 </p>
               </form>
             </div>

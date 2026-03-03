@@ -12,18 +12,20 @@ export const Header = () => {
             </a>
             <nav className="hidden md:flex items-center gap-6">
               <a href="#overview" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Overview
+                The Blueprint™
               </a>
               <a href="#benefits" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Benefits
+                Why ESS
               </a>
               <a href="#pricing" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Pricing
+                Programs
               </a>
             </nav>
           </div>
-          <Button variant="cta" size="default">
-            Enroll Today
+          <Button variant="cta" size="default" asChild>
+            <a href="#contact">
+              Book a Readiness Session
+            </a>
           </Button>
         </div>
       </div>

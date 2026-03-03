@@ -4,46 +4,49 @@ import { Check, Star } from "lucide-react";
 export const PricingSection = () => {
   const plans = [
     {
-      name: "Solo",
-      target: "Individual Users / Small Teams",
+      name: "Copilot Foundations",
+      target: "Small Teams & Departments",
       duration: "3-hour core workshop",
       features: [
-        "MVP-led training",
-        "Core App Playbooks",
-        "Foundational Copilot skills",
+        "Microsoft MVP-led training",
+        "Core App Copilot playbooks",
+        "Foundational prompt engineering",
+        "Security & governance overview",
         "Q&A session included",
       ],
-      cta: "ENROLL NOW",
+      cta: "Request a Readiness Session",
       highlighted: false,
     },
     {
-      name: "First Flight",
-      target: "Mid-size Teams / Department",
-      duration: "3-5 hours over 1 week",
+      name: "Governed Activation",
+      target: "Mid-Size Organizations",
+      duration: "3–5 hours over 1 week",
       features: [
-        "Everything in Solo",
-        "Excel/PowerPoint Deep Dive",
-        "Custom Prompt Playbooks",
-        "Role-specific training",
-        "Extended support",
+        "Everything in Foundations",
+        "Permissions & access review",
+        "Role-specific prompt playbooks",
+        "Department-level training sessions",
+        "Compliance alignment documentation",
+        "1 week post-launch support",
       ],
-      cta: "ENROLL NOW",
+      cta: "Request a Readiness Session",
       highlighted: false,
     },
     {
-      name: "Full Adoption",
-      target: "Entire Organization",
-      duration: "3-7 hours over 1-2 weeks",
+      name: "Full Blueprint™",
+      target: "Enterprise & Regulated Industries",
+      duration: "Complete 4-phase engagement",
       badge: "RECOMMENDED",
       features: [
-        "Everything in First Flight",
-        "Dedicated Coaching (2 weeks)",
-        "Real-time Adoption Tracking",
-        "Self-service License Management Portal",
+        "Everything in Governed Activation",
+        "Full security & governance audit",
+        "HIPAA / SOC 2 / HITRUST alignment",
+        "Dedicated coaching (2 weeks)",
+        "Real-time adoption dashboards",
+        "Executive ROI reporting",
         "Priority 24/7 support",
-        "Executive reporting dashboard",
       ],
-      cta: "ENROLL NOW",
+      cta: "Get Your Copilot Blueprint",
       highlighted: true,
     },
   ];
@@ -54,10 +57,10 @@ export const PricingSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Choose Your Path to Copilot Mastery
+              Engagement Models
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Select the plan that best fits your organization's size and adoption goals
+              Structured programs designed for your organization's size, compliance requirements, and adoption goals.
             </p>
           </div>
 
@@ -109,9 +112,9 @@ export const PricingSection = () => {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground">
-              Need a custom solution for your enterprise?{" "}
+              Designed specifically for healthcare, financial services, and other regulated industries.{" "}
               <a href="#contact" className="text-primary font-medium hover:underline">
-                Contact us for pricing
+                Contact us for a custom engagement
               </a>
             </p>
           </div>

@@ -25,10 +25,10 @@ export const TrustSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Trusted by Industry Leaders Across Key Sectors
+              Trusted by Healthcare and Enterprise Organizations Nationwide
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The ESS Copilot Academy methodology is trusted by experts from Fortune 500 companies, with Microsoft themselves as a client.
+              Our methodology is proven across Fortune 500 companies, healthcare systems, financial services, and other regulated enterprises — with Microsoft themselves as a client.
             </p>
           </div>
 
@@ -55,8 +55,8 @@ export const TrustSection = () => {
                 <Shield className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Enterprise-Grade Training</h3>
-                <p className="text-sm text-muted-foreground">Designed for organizations of all sizes with proven methodologies</p>
+                <h3 className="font-semibold text-foreground mb-1">Governance-First Approach</h3>
+                <p className="text-sm text-muted-foreground">HIPAA, SOC 2, HITRUST-aligned deployment for regulated environments</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -64,8 +64,8 @@ export const TrustSection = () => {
                 <Award className="w-6 h-6 text-secondary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Microsoft MVP-Led</h3>
-                <p className="text-sm text-muted-foreground">Training delivered by recognized Microsoft experts and MVPs</p>
+                <h3 className="font-semibold text-foreground mb-1">Microsoft MVP-Led Advisory</h3>
+                <p className="text-sm text-muted-foreground">Training and strategy delivered by recognized Microsoft experts</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -73,8 +73,8 @@ export const TrustSection = () => {
                 <CheckCircle className="w-6 h-6 text-accent-foreground" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Proven Results</h3>
-                <p className="text-sm text-muted-foreground">Real-world success stories from healthcare to enterprise tech</p>
+                <h3 className="font-semibold text-foreground mb-1">Measurable Outcomes</h3>
+                <p className="text-sm text-muted-foreground">Adoption tracking, productivity KPIs, and board-ready ROI reporting</p>
               </div>
             </div>
           </div>
