@@ -22,8 +22,8 @@ const Index = () => {
         <ConsultationValueSection />
         <ROICalculatorSection />
         <PlanToExecutionSection />
-        <SocialProofSection />
         <TrustSection />
+        <SocialProofSection />
         <FinalCTASection />
       </main>
       <Footer />
