@@ -4,15 +4,15 @@ export const PlanToExecutionSection = () => {
   const capabilities = [
     {
       icon: Award,
-      text: "Microsoft MVP-led workshops to train teams on real, role-specific Copilot workflows.",
+      text: "Microsoft MVP-led workshops that train teams on real, role-specific Copilot workflows — not generic demos.",
     },
     {
       icon: BookOpen,
-      text: "Custom prompt playbooks for departments like sales, operations, finance, HR, and IT.",
+      text: "Custom prompt playbooks for sales, operations, finance, HR, IT, and more — ready to use on day one.",
     },
     {
       icon: BarChart3,
-      text: "Ongoing adoption check-ins and recommendations to keep usage and ROI growing.",
+      text: "Ongoing adoption check-ins and data-driven recommendations to keep usage and ROI growing quarter over quarter.",
     },
   ];
 
@@ -25,7 +25,7 @@ export const PlanToExecutionSection = () => {
               From Adoption Plan to Everyday Copilot Use
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The consultation is valuable on its own — you'll leave with clarity and a plan. If you want help executing, ESS has structured Copilot enablement programs that take you from plan to measurable, organization-wide adoption.
+              The consultation is valuable on its own — you'll walk away with clarity and a plan. If you want hands-on help executing that plan, ESS offers structured Copilot enablement programs designed to take you from strategy to measurable, organization-wide adoption.
             </p>
           </div>
 

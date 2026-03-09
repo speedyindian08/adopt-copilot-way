@@ -3,19 +3,19 @@ import { Quote } from "lucide-react";
 export const SocialProofSection = () => {
   const testimonials = [
     {
-      quote: "We had 600 Copilot licenses sitting mostly unused. ESS gave us role-specific playbooks and a structured rollout — adoption went from 18% to 82% in 30 days. Our teams are actually using it daily now.",
+      quote: "We had 600 Copilot licenses and maybe 18% real usage. ESS gave us role-specific playbooks and a structured rollout plan — adoption hit 82% within 30 days. Teams are actually using it every day now.",
       author: "Sarah Mitchell",
       title: "VP of Digital Transformation",
       company: "Regional Healthcare System",
     },
     {
-      quote: "The consultation alone was worth it. Within 30 minutes, we had a clear adoption plan and five use cases we hadn't considered. Two months later, every department has workflows running through Copilot.",
+      quote: "We were skeptical another 'strategy call' would help. Within 30 minutes, we had a clear adoption plan and five use cases we hadn't considered. Two months later, every department has live Copilot workflows.",
       author: "James Richardson",
       title: "Director of IT Operations",
       company: "Mid-Market Financial Services Firm",
     },
     {
-      quote: "I needed to show the board that our Copilot investment was paying off. ESS helped us set up tracking from day one — we reported a projected 340% ROI at our next board meeting. That changed the conversation entirely.",
+      quote: "I needed to justify our Copilot spend to the board. ESS Copilot Academy helped us set up tracking from day one — we reported a projected 340% ROI at the next board meeting. That changed the conversation entirely.",
       author: "Dr. Michael Chen",
       title: "Chief Information Officer",
       company: "Multi-Site Health System",

@@ -2,9 +2,9 @@ import { CheckCircle } from "lucide-react";
 
 export const IsThisForYouSection = () => {
   const qualifiers = [
-    "You already have, or will soon have, Microsoft 365 Copilot licenses.",
-    "You're responsible for driving Copilot usage and ROI across teams.",
-    "Adoption is stalled, uneven, or still mostly hypothetical.",
+    "You have — or are about to roll out — Microsoft 365 Copilot licenses.",
+    "You're the one accountable for adoption, usage, and proving ROI.",
+    "Adoption has stalled, is uneven across teams, or hasn't really started yet.",
   ];
 
   return (
@@ -12,7 +12,7 @@ export const IsThisForYouSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4 text-center">
-            Is this for you?
+            Sound familiar?
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             {qualifiers.map((item, index) => (

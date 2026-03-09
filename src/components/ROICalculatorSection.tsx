@@ -11,7 +11,7 @@ export const ROICalculatorSection = () => {
 
   const weeksPerYear = 48;
   const annualSavings = users * hoursSaved * hourlyCost * weeksPerYear;
-  const copilotCostPerUser = 30 * 12; // $30/month per user
+  const copilotCostPerUser = 30 * 12;
   const totalCost = users * copilotCostPerUser;
   const roi = totalCost > 0 ? Math.round(((annualSavings - totalCost) / totalCost) * 100) : 0;
   const paybackMonths = annualSavings > 0 ? Math.max(1, Math.round((totalCost / annualSavings) * 12)) : 0;
@@ -20,9 +20,9 @@ export const ROICalculatorSection = () => {
     new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
 
   const benefits = [
-    "Quantify the upside of higher Copilot adoption across your organization.",
-    "Create a simple story leaders can understand — time saved and dollars saved.",
-    "Set a measurable target you can use as a goal for the next 30–90 days.",
+    "Quantify the upside of driving higher Copilot adoption across your org.",
+    "Build a simple story leaders actually understand — hours saved, dollars saved.",
+    "Set a measurable target you can revisit in 30, 60, and 90 days.",
   ];
 
   return (
@@ -34,7 +34,7 @@ export const ROICalculatorSection = () => {
               Estimate Your Copilot ROI in Minutes
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Plug in your numbers to see what higher Copilot adoption could mean for your organization. Enter your user count, estimated time saved per person per week, and average hourly cost — the calculator shows your projected annual savings, payback period, and ROI.
+              Enter your user count, estimated time saved per person per week, and average hourly cost. The calculator shows your projected annual savings, payback period, and ROI — so you can see what real adoption is worth.
             </p>
           </div>
 
@@ -119,6 +119,9 @@ export const ROICalculatorSection = () => {
                     </li>
                   ))}
                 </ul>
+                <p className="text-xs text-muted-foreground mt-3 italic">
+                  Use this as your baseline today, then revisit it after your first 30 days of focused adoption.
+                </p>
               </div>
 
               <div className="text-center">
