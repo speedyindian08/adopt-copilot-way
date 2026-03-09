@@ -6,6 +6,7 @@ import { ConsultationValueSection } from "@/components/ConsultationValueSection"
 import { ROICalculatorSection } from "@/components/ROICalculatorSection";
 import { PlanToExecutionSection } from "@/components/PlanToExecutionSection";
 import { SocialProofSection } from "@/components/SocialProofSection";
+import { TrustSection } from "@/components/TrustSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
@@ -22,6 +23,7 @@ const Index = () => {
         <ROICalculatorSection />
         <PlanToExecutionSection />
         <SocialProofSection />
+        <TrustSection />
         <FinalCTASection />
       </main>
       <Footer />
