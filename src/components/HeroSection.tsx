@@ -12,13 +12,12 @@ export const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Deploy Microsoft Copilot the Right Way —{" "}
-            <span className="text-primary">Secure, Governed, and Measurable</span>{" "}
-            in 30 Days
+            Buying Copilot is easy.{" "}
+            <span className="text-primary">Getting secure, governed, and measurable ROI from it isn't.</span>
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            The structured, Microsoft MVP-led advisory and training program built for healthcare, financial services, and regulated enterprises — so you can activate Copilot with confidence, compliance, and measurable ROI.
+            The ESS Secure Copilot Academy is a structured, Microsoft MVP‑led advisory and training program for healthcare, financial services, and other regulated enterprises — so you can deploy Copilot with governance, drive adoption, and prove ROI to your board.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
@@ -30,7 +29,7 @@ export const HeroSection = () => {
             </Button>
             <Button variant="outline" size="xl" asChild>
               <a href="#pricing">
-                View Programs & Pricing
+                View Copilot Academy Programs & Pricing
               </a>
             </Button>
           </div>
