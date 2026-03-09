@@ -13,7 +13,7 @@ export const HeroSection = () => {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Buying Copilot is easy.{" "}
-            <span className="text-primary">Getting secure, governed, and measurable ROI from it isn't.</span>
+            <span className="text-primary">Getting ROI isn't.</span>
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
