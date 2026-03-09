@@ -4,19 +4,19 @@ export const WhyNoROISection = () => {
   const reasons = [
     {
       title: "No role-based use cases",
-      description: "Users don't know what to do beyond basic prompts. Without clear, department-specific workflows, Copilot sits idle.",
+      description: "People open Copilot, type a vague prompt, get a mediocre answer, and stop trying. Without clear, department-specific workflows, the tool sits idle.",
     },
     {
       title: "No structured enablement",
-      description: "Early curiosity never turns into daily habits. Without a training plan, adoption peaks in week one and flatlines.",
+      description: "Day-one curiosity fades fast. Without a real training plan, adoption peaks in the first week — then flatlines.",
     },
     {
       title: "No visibility into usage",
-      description: "There's no simple way to see who's actually using Copilot, how often, or whether it's changing the way people work.",
+      description: "You can't tell who's using Copilot, how often, or whether it's actually changing the way work gets done.",
     },
     {
       title: "No ROI story for leadership",
-      description: "Without before-and-after metrics, it's nearly impossible to prove the investment is paying off — or justify expanding it.",
+      description: "Without before-and-after metrics, there's no way to prove the investment is paying off — or justify expanding it.",
     },
   ];
 
@@ -29,7 +29,7 @@ export const WhyNoROISection = () => {
               Why Copilot Isn't Delivering ROI Yet
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Most organizations buy Copilot expecting instant productivity. Here's why that rarely happens on its own.
+              Buying licenses is the easy part. Turning them into daily productivity gains? That's where most organizations get stuck.
             </p>
           </div>
 

@@ -10,7 +10,7 @@ export const FinalCTASection = () => {
             Ready to Unlock Copilot Adoption and ROI?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get clarity on where your Copilot adoption stands, where it can go, and how to get there in the next 30 days. The consultation is focused, practical, and completely no-obligation.
+            Find out exactly where your Copilot adoption stands, where it can go, and how to get there in the next 30 days. The consultation is focused, practical, and completely no-obligation.
           </p>
           <Button variant="cta" size="xl" className="group" asChild>
             <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com" target="_blank" rel="noopener noreferrer">
@@ -19,7 +19,7 @@ export const FinalCTASection = () => {
             </a>
           </Button>
           <p className="text-sm text-muted-foreground mt-6 max-w-xl mx-auto">
-            In 30 minutes, we'll map your adoption gaps, identify quick-win use cases, and outline a 30-day Copilot adoption plan tailored to your organization.
+            In 30 minutes, we'll map your adoption gaps, highlight quick-win use cases, and outline a 30-day Copilot adoption plan tailored to your organization.
           </p>
         </div>
       </div>
