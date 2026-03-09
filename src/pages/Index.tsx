@@ -23,6 +23,7 @@ const Index = () => {
         <ROICalculatorSection />
         <PlanToExecutionSection />
         <SocialProofSection />
+        <TrustSection />
         <FinalCTASection />
       </main>
       <Footer />
