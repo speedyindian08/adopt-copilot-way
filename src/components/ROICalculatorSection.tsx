@@ -129,8 +129,8 @@ export const ROICalculatorSection = () => {
                   Like what you see? Let's build the plan to reach these numbers.
                 </p>
                 <Button variant="cta" size="lg" className="group" asChild>
-                  <a href="#contact">
-                    Book a Copilot Adoption Consultation
+                  <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com" target="_blank" rel="noopener noreferrer">
+                    Book a Copilot Readiness Session
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>

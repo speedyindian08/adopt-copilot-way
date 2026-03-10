@@ -4,6 +4,7 @@ import { ProblemSection } from "@/components/ProblemSection";
 import { ConsultationValueSection } from "@/components/ConsultationValueSection";
 import { ROICalculatorSection } from "@/components/ROICalculatorSection";
 import { AcademyOverviewSection } from "@/components/AcademyOverviewSection";
+import { PricingSection } from "@/components/PricingSection";
 import { TrustSection } from "@/components/TrustSection";
 import { SocialProofSection } from "@/components/SocialProofSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
@@ -20,6 +21,7 @@ const Index = () => {
         <ConsultationValueSection />
         <ROICalculatorSection />
         <AcademyOverviewSection />
+        <PricingSection />
         <TrustSection />
         <SocialProofSection />
         <FinalCTASection />

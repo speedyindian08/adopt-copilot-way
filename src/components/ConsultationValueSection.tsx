@@ -65,8 +65,8 @@ export const ConsultationValueSection = () => {
               Your CIO or IT lead, a digital transformation or operations lead, and one line-of-business stakeholder who'll champion day-to-day adoption.
             </p>
             <Button variant="cta" size="lg" className="group" asChild>
-              <a href="#contact">
-                Book Your Copilot Adoption Consultation
+              <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com" target="_blank" rel="noopener noreferrer">
+                Book a Copilot Readiness Session
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
