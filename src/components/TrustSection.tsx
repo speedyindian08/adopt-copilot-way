@@ -51,9 +51,13 @@ export const TrustSection = () => {
                     key={`${client.id}-${index}`}
                     className="flex-[0_0_200px] flex items-center justify-center h-24 bg-card rounded-lg border border-border p-6"
                   >
-                    <span className="text-xl font-bold text-muted-foreground uppercase tracking-wider">
-                      {client.name}
-                    </span>
+                    {client.logo ? (
+                      <img src={client.logo} alt={client.name} className="max-h-14 max-w-[160px] object-contain" />
+                    ) : (
+                      <span className="text-xl font-bold text-muted-foreground uppercase tracking-wider">
+                        {client.name}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
