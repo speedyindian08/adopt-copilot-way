@@ -2,16 +2,22 @@ import { GraduationCap, Award, TrendingUp } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 
+import bpLogo from "@/assets/logos/bp.avif";
+import yellowCabLogo from "@/assets/logos/yellow-cab.avif";
+import siemensLogo from "@/assets/logos/siemens-energy.webp";
+import prezentLogo from "@/assets/logos/prezent.avif";
+import sotcLogo from "@/assets/logos/sotc.avif";
+
 export const TrustSection = () => {
   const clients = [
-    { name: "JIFFY LUBE", id: "jiffy-lube" },
-    { name: "ARC", id: "arc" },
-    { name: "PURAKAL", id: "purakal" },
-    { name: "PREZENT", id: "prezent" },
-    { name: "SOTC", id: "sotc" },
-    { name: "BP", id: "bp" },
-    { name: "YELLOW", id: "yellow" },
-    { name: "EMBLEM", id: "emblem" },
+    { name: "JIFFY LUBE", id: "jiffy-lube", logo: null },
+    { name: "ARC", id: "arc", logo: null },
+    { name: "PURAKAL", id: "purakal", logo: null },
+    { name: "PREZENT", id: "prezent", logo: prezentLogo },
+    { name: "SOTC", id: "sotc", logo: sotcLogo },
+    { name: "BP", id: "bp", logo: bpLogo },
+    { name: "YELLOW CAB", id: "yellow", logo: yellowCabLogo },
+    { name: "SIEMENS ENERGY", id: "siemens-energy", logo: siemensLogo },
   ];
 
   const [emblaRef] = useEmblaCarousel(
@@ -45,9 +51,13 @@ export const TrustSection = () => {
                     key={`${client.id}-${index}`}
                     className="flex-[0_0_200px] flex items-center justify-center h-24 bg-card rounded-lg border border-border p-6"
                   >
-                    <span className="text-xl font-bold text-muted-foreground uppercase tracking-wider">
-                      {client.name}
-                    </span>
+                    {client.logo ? (
+                      <img src={client.logo} alt={client.name} className="max-h-14 max-w-[160px] object-contain" />
+                    ) : (
+                      <span className="text-xl font-bold text-muted-foreground uppercase tracking-wider">
+                        {client.name}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
