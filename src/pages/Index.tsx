@@ -1,12 +1,11 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { IsThisForYouSection } from "@/components/IsThisForYouSection";
-import { WhyNoROISection } from "@/components/WhyNoROISection";
+import { ProblemSection } from "@/components/ProblemSection";
 import { ConsultationValueSection } from "@/components/ConsultationValueSection";
 import { ROICalculatorSection } from "@/components/ROICalculatorSection";
-import { PlanToExecutionSection } from "@/components/PlanToExecutionSection";
-import { SocialProofSection } from "@/components/SocialProofSection";
+import { AcademyOverviewSection } from "@/components/AcademyOverviewSection";
 import { TrustSection } from "@/components/TrustSection";
+import { SocialProofSection } from "@/components/SocialProofSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
@@ -17,11 +16,10 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <IsThisForYouSection />
-        <WhyNoROISection />
+        <ProblemSection />
         <ConsultationValueSection />
         <ROICalculatorSection />
-        <PlanToExecutionSection />
+        <AcademyOverviewSection />
         <TrustSection />
         <SocialProofSection />
         <FinalCTASection />

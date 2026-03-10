@@ -5,27 +5,27 @@ export const ConsultationValueSection = () => {
   const deliverables = [
     {
       icon: Target,
-      text: "A clear-eyed snapshot of where your Copilot adoption stands today — and where it's most likely to stall.",
+      text: "<strong>A clear-eyed adoption snapshot</strong> — where your Copilot adoption stands today and where it's most likely to stall.",
     },
     {
       icon: Lightbulb,
-      text: "3–5 high-impact use cases mapped to your specific roles and workflows — not generic demos.",
+      text: "<strong>3–5 high-impact use cases</strong> mapped to your specific roles and workflows — not generic demos.",
     },
     {
       icon: CalendarCheck,
-      text: "A 30-day adoption roadmap with concrete milestones your team can actually hit.",
+      text: "<strong>A 30-day adoption roadmap</strong> with concrete milestones your team can actually hit.",
     },
     {
       icon: BookOpen,
-      text: "Recommendations for training formats, prompt playbooks, and internal champions to sustain momentum.",
+      text: "<strong>Training and enablement recommendations</strong> — formats, prompt playbooks, and internal champions to sustain momentum.",
     },
     {
       icon: BarChart3,
-      text: "Simple metrics to track adoption and outcomes from day one — so you can show progress, not just activity.",
+      text: "<strong>Simple metrics from day one</strong> to track adoption and outcomes — so you can show progress, not just activity.",
     },
     {
       icon: Handshake,
-      text: "An honest assessment of whether partnering with ESS Copilot Academy makes sense — and in what format.",
+      text: "<strong>An honest assessment</strong> of whether partnering with ESS Copilot Academy makes sense — and in what format.",
     },
   ];
 
@@ -35,7 +35,7 @@ export const ConsultationValueSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              What You'll Walk Away With
+              What You'll Walk Away With in Your ESS Copilot Academy Readiness Session
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               This is a focused, 30-minute working session — not a generic sales call. You'll leave with a clear diagnosis of your adoption gaps and a concrete plan to close them.
@@ -50,7 +50,10 @@ export const ConsultationValueSection = () => {
                   <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <p className="text-foreground text-sm leading-relaxed">{item.text}</p>
+                  <p
+                    className="text-foreground text-sm leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                  />
                 </div>
               );
             })}

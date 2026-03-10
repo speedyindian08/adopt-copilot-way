@@ -120,7 +120,7 @@ export const ROICalculatorSection = () => {
                   ))}
                 </ul>
                 <p className="text-xs text-muted-foreground mt-3 italic">
-                  Use this as your baseline today, then revisit it after your first 30 days of focused adoption.
+                  Bring these numbers to your ESS Copilot Academy readiness session and we'll pressure‑test them against real-world adoption benchmarks.
                 </p>
               </div>
 
