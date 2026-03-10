@@ -9,12 +9,13 @@ import prezentLogo from "@/assets/logos/prezent.avif";
 import sotcLogo from "@/assets/logos/sotc.avif";
 import jiffyLubeLogo from "@/assets/logos/jiffy-lube.avif";
 import emblemLogo from "@/assets/logos/emblem.avif";
+import purakalLogo from "@/assets/logos/purakal.webp";
 
 export const TrustSection = () => {
   const clients = [
     { name: "JIFFY LUBE", id: "jiffy-lube", logo: jiffyLubeLogo },
     { name: "ARC", id: "arc", logo: null },
-    { name: "PURAKAL", id: "purakal", logo: null },
+    { name: "PURAKAL", id: "purakal", logo: purakalLogo },
     { name: "PREZENT", id: "prezent", logo: prezentLogo },
     { name: "SOTC", id: "sotc", logo: sotcLogo },
     { name: "BP", id: "bp", logo: bpLogo },
