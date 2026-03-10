@@ -7,6 +7,8 @@ import yellowCabLogo from "@/assets/logos/yellow-cab.avif";
 import siemensLogo from "@/assets/logos/siemens-energy.webp";
 import prezentLogo from "@/assets/logos/prezent.avif";
 import sotcLogo from "@/assets/logos/sotc.avif";
+import jiffyLubeLogo from "@/assets/logos/jiffy-lube.avif";
+import emblemLogo from "@/assets/logos/emblem.avif";
 
 export const TrustSection = () => {
   const clients = [
