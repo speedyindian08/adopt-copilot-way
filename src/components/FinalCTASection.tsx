@@ -7,20 +7,17 @@ export const FinalCTASection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Ready to Unlock Copilot Adoption and ROI?
+            Ready to Unlock Copilot Adoption and ROI with ESS Copilot Academy?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Find out exactly where your Copilot adoption stands, where it can go, and how to get there in the next 30 days. The consultation is focused, practical, and completely no-obligation.
+            In 30 minutes, we'll map your adoption gaps, highlight quick-win use cases, and outline a 30‑day Copilot adoption plan tailored to your regulated organization.
           </p>
           <Button variant="cta" size="xl" className="group" asChild>
             <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com" target="_blank" rel="noopener noreferrer">
-              Book Your Copilot Adoption Consultation
+              Book a Copilot Readiness Session
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground mt-6 max-w-xl mx-auto">
-            In 30 minutes, we'll map your adoption gaps, highlight quick-win use cases, and outline a 30-day Copilot adoption plan tailored to your organization.
-          </p>
         </div>
       </div>
     </section>
