@@ -10,6 +10,7 @@ import { SocialProofSection } from "@/components/SocialProofSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
@@ -17,14 +18,30 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ProblemSection />
-        <ConsultationValueSection />
-        <ROICalculatorSection />
-        <AcademyOverviewSection />
-        <PricingSection />
-        <TrustSection />
-        <SocialProofSection />
-        <FinalCTASection />
+        <ScrollReveal>
+          <ProblemSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ConsultationValueSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ROICalculatorSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <AcademyOverviewSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <PricingSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <TrustSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SocialProofSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FinalCTASection />
+        </ScrollReveal>
       </main>
       <Footer />
       <Chatbot />
