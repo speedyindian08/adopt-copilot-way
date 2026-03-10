@@ -20,6 +20,7 @@ export const TrustSection = () => {
     { name: "BP", id: "bp", logo: bpLogo },
     { name: "YELLOW CAB", id: "yellow", logo: yellowCabLogo },
     { name: "SIEMENS ENERGY", id: "siemens-energy", logo: siemensLogo },
+    { name: "EMBLEM", id: "emblem", logo: emblemLogo },
   ];
 
   const [emblaRef] = useEmblaCarousel(
