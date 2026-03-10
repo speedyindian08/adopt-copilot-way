@@ -7,10 +7,12 @@ import yellowCabLogo from "@/assets/logos/yellow-cab.avif";
 import siemensLogo from "@/assets/logos/siemens-energy.webp";
 import prezentLogo from "@/assets/logos/prezent.avif";
 import sotcLogo from "@/assets/logos/sotc.avif";
+import jiffyLubeLogo from "@/assets/logos/jiffy-lube.avif";
+import emblemLogo from "@/assets/logos/emblem.avif";
 
 export const TrustSection = () => {
   const clients = [
-    { name: "JIFFY LUBE", id: "jiffy-lube", logo: null },
+    { name: "JIFFY LUBE", id: "jiffy-lube", logo: jiffyLubeLogo },
     { name: "ARC", id: "arc", logo: null },
     { name: "PURAKAL", id: "purakal", logo: null },
     { name: "PREZENT", id: "prezent", logo: prezentLogo },
@@ -18,6 +20,7 @@ export const TrustSection = () => {
     { name: "BP", id: "bp", logo: bpLogo },
     { name: "YELLOW CAB", id: "yellow", logo: yellowCabLogo },
     { name: "SIEMENS ENERGY", id: "siemens-energy", logo: siemensLogo },
+    { name: "EMBLEM", id: "emblem", logo: emblemLogo },
   ];
 
   const [emblaRef] = useEmblaCarousel(
