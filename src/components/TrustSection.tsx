@@ -12,7 +12,7 @@ import emblemLogo from "@/assets/logos/emblem.avif";
 
 export const TrustSection = () => {
   const clients = [
-    { name: "JIFFY LUBE", id: "jiffy-lube", logo: null },
+    { name: "JIFFY LUBE", id: "jiffy-lube", logo: jiffyLubeLogo },
     { name: "ARC", id: "arc", logo: null },
     { name: "PURAKAL", id: "purakal", logo: null },
     { name: "PREZENT", id: "prezent", logo: prezentLogo },
