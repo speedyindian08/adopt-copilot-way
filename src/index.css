@@ -1,6 +1,6 @@
+/* Reset — must be first */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { margin: 0; padding: 0; background: #0a0d12; }
-body { margin: 0; padding: 0; background: #0a0d12; }
+html, body { margin: 0; padding: 0; background: #0a0d12; overflow-x: hidden; }
 
 @tailwind base;
 @tailwind components;
@@ -8,59 +8,58 @@ body { margin: 0; padding: 0; background: #0a0d12; }
 
 @layer base {
   :root {
-    /* ESS Dark Enterprise Design System */
-    --color-bg:               210 33% 5%;
-    --color-surface:          222 27% 10%;
-    --color-surface-2:        228 28% 13%;
-    --color-surface-offset:   230 25% 18%;
-    --color-border:           0 0% 100% / 0.07;
-    --color-border-hover:     224 76% 48% / 0.45;
-
-    --color-text:             228 33% 97%;
-    --color-text-muted:       227 10% 60%;
-    --color-text-faint:       228 13% 36%;
-
-    --color-primary:          224 76% 48%;
-    --color-primary-hover:    224 76% 40%;
-    --color-primary-glow:     224 76% 48% / 0.30;
-    --color-accent:           187 94% 43%;
-    --color-accent-glow:      187 94% 43% / 0.20;
-    --color-success:          160 84% 39%;
-    --color-warning:          38 92% 50%;
-    --color-error:            0 84% 60%;
-
-    --font-display:           'Sora', sans-serif;
-    --font-body:              'Plus Jakarta Sans', sans-serif;
-
-    /* Map to shadcn tokens */
-    --background: var(--color-bg);
-    --foreground: var(--color-text);
-    --card: var(--color-surface);
-    --card-foreground: var(--color-text);
-    --popover: var(--color-surface);
-    --popover-foreground: var(--color-text);
-    --primary: var(--color-primary);
-    --primary-foreground: 0 0% 100%;
-    --secondary: var(--color-accent);
-    --secondary-foreground: 0 0% 100%;
-    --accent: var(--color-surface-offset);
-    --accent-foreground: var(--color-text);
-    --muted: var(--color-surface-2);
-    --muted-foreground: var(--color-text-muted);
-    --destructive: var(--color-error);
-    --destructive-foreground: 0 0% 100%;
-    --border: var(--color-border);
-    --input: var(--color-surface-2);
-    --ring: var(--color-primary);
-
-    --radius: 0.75rem;
-
+    --color-bg:             #0a0d12;
+    --color-surface:        #111520;
+    --color-surface-2:      #171c2e;
+    --color-surface-offset: #1e2540;
+    --color-border:         rgba(255,255,255,0.07);
+    --color-border-hover:   rgba(37,99,235,0.45);
+    --color-text:           #f0f2f8;
+    --color-text-muted:     #8b92a8;
+    --color-text-faint:     #4a5068;
+    --color-primary:        #2563eb;
+    --color-primary-hover:  #1d4ed8;
+    --color-primary-glow:   rgba(37,99,235,0.30);
+    --color-accent:         #06b6d4;
+    --color-accent-glow:    rgba(6,182,212,0.20);
+    --color-success:        #10b981;
+    --color-warning:        #f59e0b;
+    --color-error:          #ef4444;
+    --font-display:         'Sora', sans-serif;
+    --font-body:            'Plus Jakarta Sans', sans-serif;
+    --radius-sm:   0.375rem;
+    --radius-md:   0.5rem;
+    --radius-lg:   0.75rem;
+    --radius-xl:   1rem;
+    --radius-2xl:  1.5rem;
+    --radius-full: 9999px;
     --shadow-sm:   0 1px 3px rgba(0,0,0,0.4);
     --shadow-md:   0 4px 16px rgba(0,0,0,0.5);
     --shadow-lg:   0 12px 40px rgba(0,0,0,0.6);
     --shadow-glow: 0 0 32px rgba(37,99,235,0.25);
-
     --transition:  200ms cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* shadcn token mappings (HSL) */
+    --background: 210 33% 5%;
+    --foreground: 228 33% 97%;
+    --card: 222 27% 10%;
+    --card-foreground: 228 33% 97%;
+    --popover: 222 27% 10%;
+    --popover-foreground: 228 33% 97%;
+    --primary: 224 76% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 187 94% 43%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 230 25% 18%;
+    --accent-foreground: 228 33% 97%;
+    --muted: 228 28% 13%;
+    --muted-foreground: 227 10% 60%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 0.07;
+    --input: 228 28% 13%;
+    --ring: 224 76% 48%;
+    --radius: 0.75rem;
   }
 }
 
@@ -70,8 +69,8 @@ body { margin: 0; padding: 0; background: #0a0d12; }
   }
 
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.65;
@@ -87,20 +86,17 @@ body { margin: 0; padding: 0; background: #0a0d12; }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    color: hsl(var(--foreground));
+    color: var(--color-text);
     line-height: 1.1;
   }
 
-  p {
-    color: hsl(var(--muted-foreground));
-  }
+  p { color: var(--color-text-muted); }
 
-  section {
+  main > section,
+  .content-section {
     padding-block: clamp(64px, 8vw, 120px);
-    /* Hero overrides its own padding via Tailwind classes */
   }
 
-  /* Ensure the page wrapper has no top gap */
   #root {
     margin: 0;
     padding: 0;
@@ -115,19 +111,93 @@ body { margin: 0; padding: 0; background: #0a0d12; }
   }
 }
 
-/* Input focus styles */
-input:focus, textarea:focus {
-  border-color: hsl(var(--color-primary)) !important;
-  box-shadow: 0 0 0 2px hsl(var(--color-primary) / 0.2) !important;
+/* Nav — fixed height, no gap */
+nav, header {
+  background: rgba(10,13,18,0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Card hover glow */
-.card-glow:hover {
-  box-shadow: var(--shadow-glow);
-  border-color: hsl(var(--color-border-hover));
+header > div,
+nav > div {
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-inline: 1.5rem !important;
 }
 
-/* Prevent horizontal overflow globally */
-html, body {
-  overflow-x: hidden;
+/* Buttons */
+button[class*="primary"], a[class*="primary"],
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #06b6d4) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: var(--radius-full) !important;
+  padding: 12px 28px !important;
+  font-weight: 600 !important;
+  font-size: 0.9375rem !important;
+  transition: var(--transition) !important;
+}
+button[class*="primary"]:hover, .btn-primary:hover {
+  opacity: 0.88 !important;
+  box-shadow: 0 4px 24px var(--color-primary-glow) !important;
+  transform: translateY(-1px) !important;
+}
+button[class*="outline"], a[class*="outline"],
+.btn-secondary {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  color: white !important;
+  border-radius: var(--radius-full) !important;
+  padding: 12px 28px !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
+}
+button[class*="outline"]:hover {
+  border-color: rgba(255,255,255,0.35) !important;
+  background: rgba(255,255,255,0.05) !important;
+}
+
+/* Cards */
+.card, [class*="card"] {
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-xl) !important;
+  transition: border-color var(--transition),
+              box-shadow var(--transition),
+              transform var(--transition) !important;
+}
+.card:hover, [class*="card"]:hover {
+  border-color: var(--color-border-hover) !important;
+  box-shadow: var(--shadow-glow) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Inputs */
+input, textarea, select {
+  background: var(--color-surface-2) !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-text) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 10px 14px !important;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--color-primary-glow) !important;
+}
+
+/* Remove light backgrounds */
+.bg-white, .bg-gray-50, .bg-gray-100 {
+  background-color: var(--color-surface) !important;
+}
+
+/* Fix dark text on dark backgrounds */
+.text-gray-900, .text-black, .text-gray-800 {
+  color: var(--color-text) !important;
+}
+.text-gray-600, .text-gray-500 {
+  color: var(--color-text-muted) !important;
 }
