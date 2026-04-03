@@ -15,7 +15,7 @@ export const HeroSection = () => {
       />
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 -z-10 bg-background/60" />
+      <div className="absolute inset-0 -z-10 bg-background/50" />
 
       {/* Grid overlay */}
       <div
