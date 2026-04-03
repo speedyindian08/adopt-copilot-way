@@ -22,9 +22,9 @@ export const HeroSection = () => {
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 60% 50% at 50% 40%, hsl(224 76% 48% / 0.15), transparent),
-            linear-gradient(hsl(var(--color-border)) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(var(--color-border)) 1px, transparent 1px)
+            radial-gradient(ellipse 60% 50% at 50% 40%, rgba(37,99,235,0.15), transparent),
+            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
           `,
           backgroundSize: "100% 100%, 48px 48px, 48px 48px",
         }}
