@@ -24,29 +24,32 @@ export const HeroSection = () => {
             ESS Secure Copilot Academy
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-4 animate-fade-in font-display" style={{ animationDelay: "0.1s" }}>
+          <h1
+            className="font-extrabold tracking-tight text-foreground mb-4 animate-fade-in font-display"
+            style={{ fontSize: "clamp(2rem, 7vw, 3.5rem)", animationDelay: "0.1s" }}
+          >
             Copilot Governance &amp; Responsible AI{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">for Regulated Industries</span>
           </h1>
 
-          <p className="text-2xl sm:text-3xl font-semibold text-foreground/80 mb-6 animate-fade-in font-display" style={{ animationDelay: "0.15s" }}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-6 animate-fade-in font-display" style={{ animationDelay: "0.15s" }}>
             Buying Copilot is easy. Getting ROI isn't.
           </p>
 
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
             The ESS Secure Copilot Academy is a structured, Microsoft MVP‑led advisory and training program for healthcare, financial services, and other regulated enterprises — so you can deploy Copilot with governance, drive adoption, and prove ROI to your board.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button variant="cta" size="xl" className="group" asChild>
+            <Button variant="cta" size="xl" className="group w-full sm:w-auto" asChild>
               <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@enterprise-software-solutions.com" target="_blank" rel="noopener noreferrer">
                 Book a Copilot Readiness Session
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button variant="outline" size="xl" asChild>
+            <Button variant="outline" size="xl" className="w-full sm:w-auto" asChild>
               <a href="#pricing">
-                View Copilot Academy Programs & Pricing
+                View Programs & Pricing
               </a>
             </Button>
           </div>
@@ -68,30 +71,30 @@ export const HeroSection = () => {
             No obligation · 30-minute strategic session focused on your Copilot risks and opportunities
           </p>
 
-          {/* Outcome Stats Bar */}
+          {/* Outcome Stats Bar — stacks on mobile */}
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4 font-display">
               What ESS Copilot Academy clients are seeing in 30–90 days
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+              <div className="bg-card p-5 sm:p-6 rounded-lg border border-border card-glow transition-all duration-200">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Users className="w-5 h-5 text-primary" />
-                  <span className="text-3xl font-bold text-primary font-display">20→85%</span>
+                  <span className="text-2xl sm:text-3xl font-bold text-primary font-display">20→85%</span>
                 </div>
                 <div className="text-sm text-muted-foreground">Active Copilot users in 30 days</div>
               </div>
-              <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200">
+              <div className="bg-card p-5 sm:p-6 rounded-lg border border-border card-glow transition-all duration-200">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-secondary" />
-                  <span className="text-3xl font-bold text-secondary font-display">35%</span>
+                  <span className="text-2xl sm:text-3xl font-bold text-secondary font-display">35%</span>
                 </div>
                 <div className="text-sm text-muted-foreground">Average productivity lift among effective Copilot users</div>
               </div>
-              <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200">
+              <div className="bg-card p-5 sm:p-6 rounded-lg border border-border card-glow transition-all duration-200">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Shield className="w-5 h-5 text-secondary" />
-                  <span className="text-3xl font-bold text-secondary font-display">353%</span>
+                  <span className="text-2xl sm:text-3xl font-bold text-secondary font-display">353%</span>
                 </div>
                 <div className="text-sm text-muted-foreground">Projected 3‑year ROI on Copilot investment</div>
               </div>

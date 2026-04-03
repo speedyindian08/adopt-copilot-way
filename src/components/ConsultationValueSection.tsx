@@ -64,7 +64,7 @@ export const ConsultationValueSection = () => {
               <span className="font-semibold text-foreground">Best when attended by:</span>{" "}
               Your CIO or IT lead, a digital transformation or operations lead, and one line-of-business stakeholder who'll champion day-to-day adoption.
             </p>
-            <Button variant="cta" size="lg" className="group" asChild>
+            <Button variant="cta" size="lg" className="group w-full sm:w-auto" asChild>
               <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@enterprise-software-solutions.com" target="_blank" rel="noopener noreferrer">
                 Book a Copilot Readiness Session
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -75,7 +75,7 @@ export const PricingSection = () => {
                 key={index}
                 className={`relative bg-card rounded-xl border-2 p-8 flex flex-col transition-all duration-300 ${
                   plan.highlighted
-                    ? "border-primary shadow-glow scale-[1.03]"
+                    ? "border-primary shadow-glow lg:scale-[1.03]"
                     : "border-border card-glow"
                 }`}
               >
