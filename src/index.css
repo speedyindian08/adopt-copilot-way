@@ -108,3 +108,8 @@ input:focus, textarea:focus {
   box-shadow: var(--shadow-glow);
   border-color: hsl(var(--color-border-hover));
 }
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
