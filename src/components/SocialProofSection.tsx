@@ -41,15 +41,14 @@ export const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-20" style={{ background: 'var(--color-surface-2)' }}>
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest mb-3 block" style={{ color: '#60a5fa', letterSpacing: '0.1em' }}>Social Proof</span>
-            <h2 className="text-3xl lg:text-4xl font-bold font-display mb-4" style={{ color: 'var(--color-text)' }}>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Trusted by Industry Leaders Across Key Sectors
             </h2>
-            <p className="text-lg max-w-3xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               The ESS Copilot Academy methodology is trusted by leaders at Fortune 500 companies, healthcare systems, financial services firms, and enterprise SaaS organizations — with Microsoft themselves as a client.
             </p>
           </div>
@@ -59,24 +58,10 @@ export const SocialProofSection = () => {
             {blurbs.map((blurb, index) => {
               const Icon = blurb.icon;
               return (
-                <div
-                  key={index}
-                  className="rounded-xl p-6 text-center border transition-all duration-200 hover:-translate-y-0.5"
-                  style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-hover)';
-                    e.currentTarget.style.boxShadow = '0 0 28px var(--color-primary-glow)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <div className="w-11 h-11 rounded-md flex items-center justify-center mx-auto mb-3" style={{ background: 'rgba(37,99,235,0.1)' }}>
-                    <Icon className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <h3 className="font-semibold font-display mb-2" style={{ color: 'var(--color-text)' }}>{blurb.title}</h3>
-                  <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{blurb.description}</p>
+                <div key={index} className="bg-card border border-border rounded-lg p-6 text-center shadow-md">
+                  <Icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold text-foreground mb-2">{blurb.title}</h3>
+                  <p className="text-sm text-muted-foreground">{blurb.description}</p>
                 </div>
               );
             })}
@@ -87,25 +72,16 @@ export const SocialProofSection = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="rounded-xl p-8 border transition-all duration-200 hover:-translate-y-0.5"
-                style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--color-border-hover)';
-                  e.currentTarget.style.boxShadow = '0 0 28px var(--color-primary-glow)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--color-border)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+                className="bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-shadow"
               >
-                <span className="block text-4xl leading-none mb-[-0.75rem]" style={{ color: 'rgba(37,99,235,0.25)', fontFamily: 'Georgia, serif' }}>"</span>
-                <blockquote className="text-sm leading-relaxed mb-6 mt-4" style={{ color: 'var(--color-text-muted)' }}>
+                <Quote className="w-8 h-8 text-primary/30 mb-4" />
+                <blockquote className="text-foreground mb-6 leading-relaxed text-sm">
                   "{testimonial.quote}"
                 </blockquote>
-                <div className="pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-                  <div className="text-sm font-semibold" style={{ color: 'var(--color-text)' }}>{testimonial.author}</div>
-                  <div className="text-xs" style={{ color: 'var(--color-text-faint)' }}>{testimonial.title}</div>
-                  <div className="text-xs" style={{ color: 'var(--color-text-faint)' }}>{testimonial.company}</div>
+                <div className="border-t border-border pt-4">
+                  <div className="font-semibold text-foreground text-sm">{testimonial.author}</div>
+                  <div className="text-xs text-muted-foreground">{testimonial.title}</div>
+                  <div className="text-xs text-muted-foreground">{testimonial.company}</div>
                 </div>
               </div>
             ))}

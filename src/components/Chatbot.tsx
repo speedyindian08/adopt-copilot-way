@@ -20,7 +20,7 @@ interface LeadData {
 }
 
 const BOOKING_URL = "https://sales-enterprisessoftwaresolutions98.zohobookings.com/portal-embed#/4630761000000794002";
-const ZOHO_WEBHOOK_URL = "";
+const ZOHO_WEBHOOK_URL = ""; // Add your Zoho Flow webhook URL here
 
 const SCHEDULING_KEYWORDS = ["yes", "book", "schedule a call", "talk to someone", "schedule", "speak with", "meeting", "appointment"];
 
@@ -59,10 +59,13 @@ export const Chatbot = () => {
   };
 
   const extractLeadInfo = (text: string, currentMessages: Message[]) => {
+    // Try to extract email from text
     const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
     if (emailMatch) {
       setLeadData(prev => ({ ...prev, email: emailMatch[0] }));
     }
+
+    // Try to extract phone from text
     const phoneMatch = text.match(/[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}/);
     if (phoneMatch) {
       setLeadData(prev => ({ ...prev, phone: phoneMatch[0] }));
@@ -74,7 +77,9 @@ export const Chatbot = () => {
       console.log("Zoho webhook URL not configured");
       return;
     }
+
     const transcript = messages.map(m => `${m.role}: ${m.content}`).join("\n\n");
+    
     const payload = {
       name: leadData.name,
       email: leadData.email,
@@ -87,6 +92,7 @@ export const Chatbot = () => {
       booking_completed: bookingCompleted,
       transcript: transcript,
     };
+
     try {
       await fetch(ZOHO_WEBHOOK_URL, {
         method: "POST",
@@ -100,6 +106,7 @@ export const Chatbot = () => {
     }
   }, [messages, leadData, bookingClicked, bookingCompleted]);
 
+  // Send data to Zoho when chat closes
   useEffect(() => {
     if (!isOpen && messages.length > 1 && ZOHO_WEBHOOK_URL) {
       sendToZohoWebhook();
@@ -126,6 +133,7 @@ export const Chatbot = () => {
   };
 
   const handleSchedulingIntent = () => {
+    // If we don't have name or email, ask for it first (only once)
     if (!leadData.name && awaitingLeadInfo !== "name") {
       setAwaitingLeadInfo("name");
       setMessages(prev => [...prev, {
@@ -134,6 +142,7 @@ export const Chatbot = () => {
       }]);
       return;
     }
+
     if (!leadData.email && awaitingLeadInfo !== "email" && leadData.name) {
       setAwaitingLeadInfo("email");
       setMessages(prev => [...prev, {
@@ -142,17 +151,23 @@ export const Chatbot = () => {
       }]);
       return;
     }
+
+    // Open the booking calendar
     openBookingCalendar();
   };
 
   const sendMessage = async () => {
     if (!input.trim() || isLoading) return;
+
     const userMessage: Message = { role: "user", content: input };
     const currentInput = input;
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
+
+    // Extract any lead info from the message
     extractLeadInfo(currentInput, messages);
 
+    // Handle lead info collection
     if (awaitingLeadInfo === "name") {
       const skipWords = ["skip", "no", "pass", "next"];
       if (!skipWords.some(w => currentInput.toLowerCase().includes(w))) {
@@ -181,19 +196,29 @@ export const Chatbot = () => {
       return;
     }
 
+    // Check for scheduling intent
     if (detectSchedulingIntent(currentInput)) {
       handleSchedulingIntent();
       return;
     }
 
     setIsLoading(true);
+
     try {
       const { data, error } = await supabase.functions.invoke("chat-support", {
         body: { messages: [...messages, userMessage] },
       });
+
       if (error) throw error;
+
       if (data?.content) {
         setMessages((prev) => [...prev, { role: "assistant", content: data.content }]);
+        
+        // Check if AI response suggests scheduling
+        if (data.content.toLowerCase().includes("schedule") || 
+            data.content.toLowerCase().includes("book a call")) {
+          // Don't auto-open, let user confirm
+        }
       }
     } catch (error) {
       console.error("Chat error:", error);
@@ -229,8 +254,7 @@ export const Chatbot = () => {
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full z-50"
-          style={{ background: 'linear-gradient(135deg, #2563eb, #06b6d4)', boxShadow: '0 0 32px rgba(37,99,235,0.25)' }}
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-xl bg-primary hover:bg-primary/90 z-50"
           size="icon"
         >
           <MessageCircle className="h-6 w-6" />
@@ -239,18 +263,18 @@ export const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[500px] rounded-xl flex flex-col z-50" style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-lg)' }}>
+        <div className="fixed bottom-6 right-6 w-96 h-[500px] bg-card border border-border rounded-lg shadow-2xl flex flex-col z-50">
           {/* Header */}
-          <div className="p-4 rounded-t-xl flex justify-between items-center" style={{ background: 'linear-gradient(135deg, #2563eb, #06b6d4)' }}>
+          <div className="bg-primary text-primary-foreground p-4 rounded-t-lg flex justify-between items-center">
             <div>
-              <h3 className="font-semibold text-white font-display">Copilot Academy Support</h3>
-              <p className="text-xs text-white/80">We're here to help!</p>
+              <h3 className="font-semibold">Copilot Academy Support</h3>
+              <p className="text-xs opacity-90">We're here to help!</p>
             </div>
             <Button
               onClick={() => setIsOpen(false)}
               variant="ghost"
               size="icon"
-              className="text-white hover:bg-white/10"
+              className="text-primary-foreground hover:bg-primary-foreground/10"
             >
               <X className="h-5 w-5" />
             </Button>
@@ -265,11 +289,11 @@ export const Chatbot = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className="max-w-[80%] rounded-lg px-4 py-2"
-                    style={{
-                      background: msg.role === "user" ? 'linear-gradient(135deg, #2563eb, #06b6d4)' : 'var(--color-surface-2)',
-                      color: msg.role === "user" ? 'white' : 'var(--color-text)',
-                    }}
+                    className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                      msg.role === "user"
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-foreground"
+                    }`}
                   >
                     <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                   </div>
@@ -277,15 +301,15 @@ export const Chatbot = () => {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="rounded-lg px-4 py-2" style={{ background: 'var(--color-surface-2)' }}>
-                    <Loader2 className="h-4 w-4 animate-spin text-blue-400" />
+                  <div className="bg-muted rounded-lg px-4 py-2">
+                    <Loader2 className="h-4 w-4 animate-spin" />
                   </div>
                 </div>
               )}
             </div>
           </ScrollArea>
 
-          {/* Quick Action */}
+          {/* Quick Action - Schedule Button */}
           <div className="px-4 pb-2">
             <Button
               onClick={() => handleSchedulingIntent()}
@@ -299,7 +323,7 @@ export const Chatbot = () => {
           </div>
 
           {/* Input */}
-          <div className="p-4" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <div className="p-4 border-t border-border">
             <div className="flex gap-2">
               <Input
                 value={input}
@@ -308,12 +332,12 @@ export const Chatbot = () => {
                 placeholder="Type your message..."
                 disabled={isLoading}
                 className="flex-1"
-                style={{ background: 'var(--color-surface-2)', borderColor: 'var(--color-border)', color: 'var(--color-text)' }}
               />
               <Button
                 onClick={sendMessage}
                 disabled={isLoading || !input.trim()}
                 size="icon"
+                className="bg-primary hover:bg-primary/90"
               >
                 <Send className="h-4 w-4" />
               </Button>
@@ -324,14 +348,15 @@ export const Chatbot = () => {
 
       {/* Booking Modal */}
       <Dialog open={showBooking} onOpenChange={setShowBooking}>
-        <DialogContent className="max-w-4xl h-[80vh] p-0" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
+        <DialogContent className="max-w-4xl h-[80vh] p-0">
           <div className="flex flex-col h-full">
-            <div className="p-4 flex justify-between items-center" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-              <h2 className="font-semibold font-display" style={{ color: 'var(--color-text)' }}>Schedule Your Session</h2>
+            <div className="p-4 border-b flex justify-between items-center">
+              <h2 className="font-semibold">Schedule Your Session</h2>
               <div className="flex gap-2">
                 <Button
                   onClick={markBookingComplete}
                   size="sm"
+                  className="bg-primary hover:bg-primary/90"
                 >
                   I've Booked
                 </Button>

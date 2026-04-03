@@ -9,14 +9,10 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1200px",
+        "2xl": "1400px",
       },
     },
     extend: {
-      fontFamily: {
-        display: ["Sora", "sans-serif"],
-        body: ["Plus Jakarta Sans", "sans-serif"],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -54,36 +50,30 @@ export default {
         brand: {
           green: "hsl(var(--brand-green))",
           blue: "hsl(var(--brand-blue))",
-          cyan: "hsl(var(--brand-cyan))",
-        },
-        surface: {
-          DEFAULT: "var(--color-surface)",
-          "2": "var(--color-surface-2)",
-          offset: "var(--color-surface-offset)",
+          lime: "hsl(var(--brand-lime))",
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        xl: "var(--radius-xl)",
-        "2xl": "var(--radius-2xl)",
-        full: "var(--radius-full)",
-      },
-      boxShadow: {
-        sm: "var(--shadow-sm)",
-        md: "var(--shadow-md)",
-        lg: "var(--shadow-lg)",
-        glow: "var(--shadow-glow)",
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {

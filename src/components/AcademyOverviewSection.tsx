@@ -25,78 +25,55 @@ export const AcademyOverviewSection = () => {
   ];
 
   return (
-    <section className="py-20" style={{ background: 'var(--color-bg)' }}>
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest mb-3 block" style={{ color: '#60a5fa', letterSpacing: '0.1em' }}>The Program</span>
-            <h2 className="text-3xl lg:text-4xl font-bold font-display mb-4" style={{ color: 'var(--color-text)' }}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-primary mb-4">
+              The Program
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Inside ESS Secure Copilot Academy
             </h2>
-            <p className="text-lg max-w-3xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               ESS Copilot Academy is a structured, flexible program that fits your organization's schedule — typically 4–7 total hours. Led by Microsoft MVPs with deep Copilot and Microsoft 365 expertise, the Academy is focused on role-based workflows, governed deployments, and measurable adoption.
             </p>
           </div>
 
           {/* Key highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {[
-              { icon: Clock, title: "Flexible Format", desc: "4–7 hours total, structured to fit your team's schedule", color: "text-blue-400" },
-              { icon: Award, title: "Microsoft MVP-Led", desc: "Delivered by recognized experts in Copilot and M365", color: "text-cyan-400" },
-              { icon: Target, title: "Outcome-Focused", desc: "Role-based workflows, governed deployments, measurable ROI", color: "text-emerald-400" },
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 rounded-xl border text-center transition-all duration-200 hover:-translate-y-0.5"
-                  style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-hover)';
-                    e.currentTarget.style.boxShadow = '0 0 28px var(--color-primary-glow)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <div className="w-11 h-11 rounded-md flex items-center justify-center mx-auto mb-3" style={{ background: 'rgba(37,99,235,0.1)' }}>
-                    <Icon className={`w-6 h-6 ${item.color}`} />
-                  </div>
-                  <h3 className="font-semibold font-display mb-1" style={{ color: 'var(--color-text)' }}>{item.title}</h3>
-                  <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{item.desc}</p>
-                </div>
-              );
-            })}
+            <div className="bg-card p-6 rounded-lg border border-border shadow-md text-center">
+              <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
+              <h3 className="font-semibold text-foreground mb-1">Flexible Format</h3>
+              <p className="text-sm text-muted-foreground">4–7 hours total, structured to fit your team's schedule</p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border shadow-md text-center">
+              <Award className="w-8 h-8 text-secondary mx-auto mb-3" />
+              <h3 className="font-semibold text-foreground mb-1">Microsoft MVP-Led</h3>
+              <p className="text-sm text-muted-foreground">Delivered by recognized experts in Copilot and M365</p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border shadow-md text-center">
+              <Target className="w-8 h-8 text-accent-foreground mx-auto mb-3" />
+              <h3 className="font-semibold text-foreground mb-1">Outcome-Focused</h3>
+              <p className="text-sm text-muted-foreground">Role-based workflows, governed deployments, measurable ROI</p>
+            </div>
           </div>
 
           {/* Key components */}
-          <h3 className="text-xl font-semibold font-display text-center mb-6" style={{ color: 'var(--color-text)' }}>
+          <h3 className="text-xl font-semibold text-foreground text-center mb-6">
             Key Components of the Academy
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {components.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-5 rounded-xl border transition-all duration-200 hover:-translate-y-0.5"
-                  style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-hover)';
-                    e.currentTarget.style.boxShadow = '0 0 28px var(--color-primary-glow)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <div className="flex-shrink-0 w-11 h-11 rounded-md flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)' }}>
-                    <Icon className="w-5 h-5 text-blue-400" />
+                <div key={index} className="flex items-start gap-4 bg-card p-5 rounded-lg border border-border">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold font-display mb-1" style={{ color: 'var(--color-text)' }}>{item.title}</h4>
-                    <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{item.description}</p>
+                    <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm">{item.description}</p>
                   </div>
                 </div>
               );

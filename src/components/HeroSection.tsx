@@ -3,59 +3,24 @@ import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section
-      className="relative overflow-hidden min-h-screen flex items-center"
-      style={{
-        background: `
-          var(--color-bg)
-        `,
-      }}
-    >
-      {/* Spotlight overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(37,99,235,0.16) 0%, transparent 68%)',
-      }} />
-      {/* Grid overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        backgroundImage: `
-          repeating-linear-gradient(rgba(255,255,255,0.025) 0 1px, transparent 1px 48px),
-          repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 48px)
-        `,
-      }} />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background pt-20 pb-24 lg:pt-32 lg:pb-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Eyebrow pill */}
-          <div
-            className="inline-flex items-center gap-2 mb-6 animate-fade-in"
-            style={{
-              background: 'rgba(37,99,235,0.12)',
-              border: '1px solid rgba(37,99,235,0.28)',
-              borderRadius: 'var(--radius-full)',
-              padding: '6px 16px',
-              fontSize: '0.75rem',
-              fontWeight: 600,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase' as const,
-              color: '#93c5fd',
-            }}
-          >
-            <Shield className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-foreground mb-6 animate-fade-in">
+            <Shield className="w-4 h-4 text-primary" />
             ESS Secure Copilot Academy
           </div>
 
-          <h1 className="font-display font-extrabold tracking-tight mb-4 animate-fade-in" style={{ animationDelay: "0.1s", fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: 'var(--color-text)' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Copilot Governance &amp; Responsible AI{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              for Regulated Industries
-            </span>
+            <span className="text-primary">for Regulated Industries</span>
           </h1>
 
-          <p className="text-2xl sm:text-3xl font-semibold mb-6 animate-fade-in" style={{ animationDelay: "0.15s", color: 'var(--color-text-muted)' }}>
+          <p className="text-2xl sm:text-3xl font-semibold text-foreground/80 mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
             Buying Copilot is easy. Getting ROI isn't.
           </p>
 
-          <p className="text-lg mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s", color: 'var(--color-text-muted)', fontSize: '1.125rem', maxWidth: '580px' }}>
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
             The ESS Secure Copilot Academy is a structured, Microsoft MVP‑led advisory and training program for healthcare, financial services, and other regulated enterprises — so you can deploy Copilot with governance, drive adoption, and prove ROI to your board.
           </p>
 
@@ -74,7 +39,7 @@ export const HeroSection = () => {
           </div>
 
           {/* AI Video Avatar */}
-          <div className="max-w-2xl mx-auto mb-12 animate-fade-in rounded-xl overflow-hidden border border-white/10" style={{ animationDelay: "0.35s", boxShadow: 'var(--shadow-lg)' }}>
+          <div className="max-w-2xl mx-auto mb-12 animate-fade-in rounded-xl overflow-hidden shadow-lg border border-border" style={{ animationDelay: "0.35s" }}>
             <video
               className="w-full"
               controls
@@ -86,41 +51,44 @@ export const HeroSection = () => {
             </video>
           </div>
 
-          <p className="text-sm mb-4 animate-fade-in" style={{ animationDelay: "0.37s", color: 'var(--color-text-muted)' }}>
+          <p className="text-sm text-muted-foreground mb-4 animate-fade-in" style={{ animationDelay: "0.37s" }}>
             No obligation · 30-minute strategic session focused on your Copilot risks and opportunities
           </p>
 
           {/* Outcome Stats Bar */}
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <p className="text-sm font-semibold uppercase tracking-wider mb-4" style={{ color: '#60a5fa' }}>
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">
               What ESS Copilot Academy clients are seeing in 30–90 days
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="p-6 rounded-xl border border-white/[0.07] transition-all duration-200 hover:border-[var(--color-border-hover)] hover:shadow-glow hover:-translate-y-0.5" style={{ background: 'var(--color-surface)' }}>
+              <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <Users className="w-5 h-5 text-blue-400" />
-                  <span className="text-3xl font-bold font-display bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">20→85%</span>
+                  <Users className="w-5 h-5 text-primary" />
+                  <span className="text-3xl font-bold text-primary">20→85%</span>
                 </div>
-                <div className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Active Copilot users in 30 days</div>
+                <div className="text-sm text-muted-foreground">Active Copilot users in 30 days</div>
               </div>
-              <div className="p-6 rounded-xl border border-white/[0.07] transition-all duration-200 hover:border-[var(--color-border-hover)] hover:shadow-glow hover:-translate-y-0.5" style={{ background: 'var(--color-surface)' }}>
+              <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <TrendingUp className="w-5 h-5 text-cyan-400" />
-                  <span className="text-3xl font-bold font-display bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">35%</span>
+                  <TrendingUp className="w-5 h-5 text-secondary" />
+                  <span className="text-3xl font-bold text-secondary">35%</span>
                 </div>
-                <div className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Average productivity lift among effective Copilot users</div>
+                <div className="text-sm text-muted-foreground">Average productivity lift among effective Copilot users</div>
               </div>
-              <div className="p-6 rounded-xl border border-white/[0.07] transition-all duration-200 hover:border-[var(--color-border-hover)] hover:shadow-glow hover:-translate-y-0.5" style={{ background: 'var(--color-surface)' }}>
+              <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <Shield className="w-5 h-5 text-emerald-400" />
-                  <span className="text-3xl font-bold font-display bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">353%</span>
+                  <Shield className="w-5 h-5 text-accent-foreground" />
+                  <span className="text-3xl font-bold text-accent-foreground">353%</span>
                 </div>
-                <div className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Projected 3‑year ROI on Copilot investment</div>
+                <div className="text-sm text-muted-foreground">Projected 3‑year ROI on Copilot investment</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Decorative gradient blob */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl -z-10" />
     </section>
   );
 };

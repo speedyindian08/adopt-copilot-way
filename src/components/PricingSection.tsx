@@ -54,15 +54,17 @@ export const PricingSection = () => {
   const bookingUrl = "https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com";
 
   return (
-    <section id="pricing" className="py-20" style={{ background: 'var(--color-bg)' }}>
+    <section id="pricing" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-widest mb-3 block" style={{ color: '#60a5fa', letterSpacing: '0.1em' }}>Programs &amp; Pricing</span>
-            <h2 className="text-3xl lg:text-4xl font-bold font-display mb-4" style={{ color: 'var(--color-text)' }}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-primary mb-4">
+              Programs &amp; Pricing
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               ESS Secure Copilot Academy Engagement Models
             </h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Structured programs designed for your organization's size, compliance requirements, and adoption goals.
             </p>
           </div>
@@ -71,42 +73,35 @@ export const PricingSection = () => {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className="relative rounded-xl p-8 flex flex-col transition-all duration-300"
-                style={{
-                  background: plan.highlighted
-                    ? 'linear-gradient(160deg, rgba(37,99,235,0.08) 0%, var(--color-surface) 50%)'
-                    : 'var(--color-surface)',
-                  border: plan.highlighted
-                    ? '2px solid rgba(37,99,235,0.5)'
-                    : '1px solid var(--color-border)',
-                  boxShadow: plan.highlighted ? '0 0 48px rgba(37,99,235,0.18)' : 'none',
-                  transform: plan.highlighted ? 'scale(1.03)' : 'none',
-                  zIndex: plan.highlighted ? 2 : 1,
-                }}
+                className={`relative bg-card rounded-xl border-2 p-8 flex flex-col ${
+                  plan.highlighted
+                    ? "border-primary shadow-2xl scale-105 lg:scale-110"
+                    : "border-border shadow-md hover:shadow-lg"
+                } transition-all duration-300`}
               >
                 {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wide flex items-center gap-1.5 whitespace-nowrap" style={{ background: 'linear-gradient(135deg, #2563eb, #06b6d4)', letterSpacing: '0.06em', fontSize: '0.7rem' }}>
-                    <Star className="w-3.5 h-3.5" />
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1 shadow-lg whitespace-nowrap">
+                    <Star className="w-4 h-4" />
                     {plan.badge}
                   </div>
                 )}
 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold font-display mb-2" style={{ color: 'var(--color-text)' }}>{plan.name}</h3>
-                  <p className="text-sm font-medium mb-2 text-blue-400">{plan.target}</p>
-                  <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{plan.duration}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
+                  <p className="text-sm text-primary font-medium mb-2">{plan.target}</p>
+                  <p className="text-muted-foreground text-sm">{plan.duration}</p>
                 </div>
 
                 <ul className="space-y-3 mb-6 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm" style={{ color: 'var(--color-text)' }}>{feature}</span>
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-xs mb-6 italic" style={{ color: 'var(--color-text-muted)' }}>
+                <p className="text-xs text-muted-foreground mb-6 italic">
                   {plan.pricing}
                 </p>
 
@@ -126,7 +121,7 @@ export const PricingSection = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <p style={{ color: 'var(--color-text-muted)' }}>
+            <p className="text-muted-foreground">
               All programs are delivered through ESS Secure Copilot Academy and can be tailored for healthcare, financial services, and other regulated industries.
             </p>
           </div>

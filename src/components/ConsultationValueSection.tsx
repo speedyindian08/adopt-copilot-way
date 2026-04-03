@@ -30,15 +30,14 @@ export const ConsultationValueSection = () => {
   ];
 
   return (
-    <section id="consultation" className="py-20" style={{ background: 'var(--color-bg)' }}>
+    <section id="consultation" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest mb-3 block" style={{ color: '#60a5fa', letterSpacing: '0.1em' }}>Readiness Session</span>
-            <h2 className="text-3xl lg:text-4xl font-bold font-display mb-4" style={{ color: 'var(--color-text)' }}>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               What You'll Walk Away With in Your ESS Copilot Academy Readiness Session
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               This is a focused, 30-minute working session — not a generic sales call. You'll leave with a clear diagnosis of your adoption gaps and a concrete plan to close them.
             </p>
           </div>
@@ -47,25 +46,12 @@ export const ConsultationValueSection = () => {
             {deliverables.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-5 rounded-xl border transition-all duration-200 hover:-translate-y-0.5"
-                  style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-hover)';
-                    e.currentTarget.style.boxShadow = '0 0 28px var(--color-primary-glow)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <div className="flex-shrink-0 w-11 h-11 rounded-md flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)' }}>
-                    <Icon className="w-5 h-5 text-blue-400" />
+                <div key={index} className="flex items-start gap-4 bg-card p-5 rounded-lg border border-border">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <p
-                    className="text-sm leading-relaxed [&_strong]:text-[var(--color-text)]"
-                    style={{ color: 'var(--color-text-muted)' }}
+                    className="text-foreground text-sm leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   />
                 </div>
@@ -73,9 +59,9 @@ export const ConsultationValueSection = () => {
             })}
           </div>
 
-          <div className="rounded-xl p-6 border text-center" style={{ background: 'var(--color-surface-2)', borderColor: 'var(--color-border)' }}>
-            <p className="text-sm mb-4" style={{ color: 'var(--color-text-muted)' }}>
-              <span className="font-semibold" style={{ color: 'var(--color-text)' }}>Best when attended by:</span>{" "}
+          <div className="bg-muted/50 rounded-lg p-6 border border-border text-center">
+            <p className="text-sm text-muted-foreground mb-4">
+              <span className="font-semibold text-foreground">Best when attended by:</span>{" "}
               Your CIO or IT lead, a digital transformation or operations lead, and one line-of-business stakeholder who'll champion day-to-day adoption.
             </p>
             <Button variant="cta" size="lg" className="group" asChild>
@@ -84,7 +70,7 @@ export const ConsultationValueSection = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-faint)' }}>
+            <p className="text-xs text-muted-foreground mt-3">
               No obligation · 30 minutes · Tailored to your organization
             </p>
           </div>
