@@ -3,10 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 export const FinalCTASection = () => {
   return (
-    <section id="contact" className="py-20 bg-primary/5 border-t border-border">
+    <section id="contact" className="relative overflow-hidden">
+      {/* Blue radial glow */}
+      <div className="absolute inset-0 -z-10" style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 50%, hsl(224 76% 48% / 0.12), transparent)"
+      }} />
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 font-display">
             Ready to Unlock Copilot Adoption and ROI with ESS Copilot Academy?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

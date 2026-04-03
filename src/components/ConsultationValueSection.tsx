@@ -30,11 +30,11 @@ export const ConsultationValueSection = () => {
   ];
 
   return (
-    <section id="consultation" className="py-20 bg-background">
+    <section id="consultation">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-display">
               What You'll Walk Away With in Your ESS Copilot Academy Readiness Session
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -46,12 +46,12 @@ export const ConsultationValueSection = () => {
             {deliverables.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="flex items-start gap-4 bg-card p-5 rounded-lg border border-border">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div key={index} className="flex items-start gap-4 bg-card p-5 rounded-lg border border-border card-glow transition-all duration-200">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <p
-                    className="text-foreground text-sm leading-relaxed"
+                    className="text-foreground text-sm leading-relaxed [&_strong]:text-foreground"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   />
                 </div>
@@ -59,7 +59,7 @@ export const ConsultationValueSection = () => {
             })}
           </div>
 
-          <div className="bg-muted/50 rounded-lg p-6 border border-border text-center">
+          <div className="bg-card rounded-lg p-6 border border-border text-center">
             <p className="text-sm text-muted-foreground mb-4">
               <span className="font-semibold text-foreground">Best when attended by:</span>{" "}
               Your CIO or IT lead, a digital transformation or operations lead, and one line-of-business stakeholder who'll champion day-to-day adoption.
