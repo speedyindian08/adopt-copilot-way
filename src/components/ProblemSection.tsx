@@ -27,19 +27,19 @@ export const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20" style={{ background: 'var(--color-surface-2)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Sound familiar? qualifier strip */}
           <div className="mb-12">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-6 text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider mb-6 text-center" style={{ color: '#60a5fa', letterSpacing: '0.1em' }}>
               Sound familiar?
             </p>
             <div className="flex flex-col md:flex-row gap-6 justify-center">
               {qualifiers.map((item, index) => (
                 <div key={index} className="flex items-start gap-3 flex-1">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm font-medium">{item}</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm font-medium" style={{ color: 'var(--color-text)' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -47,10 +47,10 @@ export const ProblemSection = () => {
 
           {/* Why Copilot Isn't Delivering ROI */}
           <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold font-display mb-4" style={{ color: 'var(--color-text)' }}>
               Why Copilot Isn't Delivering ROI Yet
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
               Buying licenses is the easy part. Turning them into daily productivity gains? That's where most organizations get stuck.
             </p>
           </div>
@@ -59,15 +59,27 @@ export const ProblemSection = () => {
             {painPoints.map((reason, index) => (
               <div
                 key={index}
-                className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow"
+                className="p-6 rounded-xl border transition-all duration-200 hover:-translate-y-0.5"
+                style={{
+                  background: 'var(--color-surface)',
+                  borderColor: 'var(--color-border)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-border-hover)';
+                  e.currentTarget.style.boxShadow = '0 0 28px var(--color-primary-glow)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-border)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center">
-                    <AlertTriangle className="w-5 h-5 text-destructive" />
+                  <div className="flex-shrink-0 w-11 h-11 rounded-md flex items-center justify-center" style={{ background: 'rgba(37,99,235,0.1)' }}>
+                    <AlertTriangle className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-1">{reason.title}</h3>
-                    <p className="text-muted-foreground text-sm">{reason.description}</p>
+                    <h3 className="text-lg font-semibold mb-1" style={{ color: 'var(--color-text)' }}>{reason.title}</h3>
+                    <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{reason.description}</p>
                   </div>
                 </div>
               </div>
