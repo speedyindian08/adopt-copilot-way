@@ -112,7 +112,7 @@ html, body { margin: 0; padding: 0; background: #0a0d12; overflow-x: hidden; }
 }
 
 /* Nav — fixed height, no gap */
-nav, header {
+header {
   background: rgba(10,13,18,0.85) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   border-bottom: 1px solid rgba(255,255,255,0.06) !important;
@@ -120,12 +120,10 @@ nav, header {
   margin: 0 !important;
 }
 
-header > div,
-nav > div {
+header > div > div {
   height: 64px !important;
   display: flex !important;
   align-items: center !important;
-  padding-inline: 1.5rem !important;
 }
 
 /* Buttons */
