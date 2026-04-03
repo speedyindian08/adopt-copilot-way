@@ -15,7 +15,7 @@ export const Header = () => {
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             <a href="#overview" className="text-sm font-medium font-body text-muted-foreground hover:text-primary transition-colors">
               The Blueprint™
             </a>
@@ -33,7 +33,7 @@ export const Header = () => {
           {/* Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -43,7 +43,7 @@ export const Header = () => {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
+        <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
             <a href="#overview" onClick={() => setMobileOpen(false)} className="text-sm font-medium font-body text-muted-foreground hover:text-primary transition-colors py-2">
               The Blueprint™
