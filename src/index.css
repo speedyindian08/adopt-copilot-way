@@ -111,8 +111,8 @@ html, body { margin: 0; padding: 0; background: #0a0d12; overflow-x: hidden; }
   }
 }
 
-/* Nav — fixed height, no gap */
-header {
+/* Header styling */
+header.sticky {
   background: rgba(10,13,18,0.85) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   border-bottom: 1px solid rgba(255,255,255,0.06) !important;
@@ -120,14 +120,7 @@ header {
   margin: 0 !important;
 }
 
-header > div > div {
-  height: 64px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* Buttons */
-button[class*="primary"], a[class*="primary"],
+/* Utility classes for buttons — use .btn-primary / .btn-secondary explicitly */
 .btn-primary {
   background: linear-gradient(135deg, #2563eb, #06b6d4) !important;
   color: white !important;
@@ -138,12 +131,11 @@ button[class*="primary"], a[class*="primary"],
   font-size: 0.9375rem !important;
   transition: var(--transition) !important;
 }
-button[class*="primary"]:hover, .btn-primary:hover {
+.btn-primary:hover {
   opacity: 0.88 !important;
   box-shadow: 0 4px 24px var(--color-primary-glow) !important;
   transform: translateY(-1px) !important;
 }
-button[class*="outline"], a[class*="outline"],
 .btn-secondary {
   background: transparent !important;
   border: 1px solid rgba(255,255,255,0.15) !important;
@@ -153,24 +145,16 @@ button[class*="outline"], a[class*="outline"],
   font-weight: 600 !important;
   transition: var(--transition) !important;
 }
-button[class*="outline"]:hover {
+.btn-secondary:hover {
   border-color: rgba(255,255,255,0.35) !important;
   background: rgba(255,255,255,0.05) !important;
 }
 
-/* Cards */
-.card, [class*="card"] {
-  background: var(--color-surface) !important;
-  border: 1px solid var(--color-border) !important;
-  border-radius: var(--radius-xl) !important;
-  transition: border-color var(--transition),
-              box-shadow var(--transition),
-              transform var(--transition) !important;
-}
-.card:hover, [class*="card"]:hover {
-  border-color: var(--color-border-hover) !important;
-  box-shadow: var(--shadow-glow) !important;
-  transform: translateY(-2px) !important;
+/* Card hover glow */
+.card-glow:hover {
+  box-shadow: var(--shadow-glow);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
 }
 
 /* Inputs */
