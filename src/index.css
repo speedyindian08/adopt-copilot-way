@@ -71,7 +71,14 @@
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.65;
+    margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
