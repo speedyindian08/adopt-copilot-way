@@ -93,6 +93,13 @@
 
   section {
     padding-block: clamp(64px, 8vw, 120px);
+    /* Hero overrides its own padding via Tailwind classes */
+  }
+
+  /* Ensure the page wrapper has no top gap */
+  #root {
+    margin: 0;
+    padding: 0;
   }
 }
 
