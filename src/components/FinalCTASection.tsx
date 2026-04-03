@@ -18,7 +18,7 @@ export const FinalCTASection = () => {
             In 30 minutes, we'll map your adoption gaps, highlight quick-win use cases, and outline a 30‑day Copilot adoption plan tailored to your regulated organization.
           </p>
           <Button variant="cta" size="xl" className="group" asChild>
-            <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@enterprise-software-solutions.com" target="_blank" rel="noopener noreferrer">
               Book a Copilot Readiness Session
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>

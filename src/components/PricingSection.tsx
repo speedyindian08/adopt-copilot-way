@@ -51,7 +51,7 @@ export const PricingSection = () => {
     },
   ];
 
-  const bookingUrl = "https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com";
+  const bookingUrl = "https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@enterprise-software-solutions.com";
 
   return (
     <section id="pricing" className="bg-card/50">
