@@ -14,7 +14,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#0a0d12]">
       <Header />
       <main>
         <HeroSection />
