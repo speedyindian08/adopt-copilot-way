@@ -14,7 +14,6 @@ import purakalLogo from "@/assets/logos/purakal.webp";
 export const TrustSection = () => {
   const clients = [
     { name: "JIFFY LUBE", id: "jiffy-lube", logo: jiffyLubeLogo },
-    
     { name: "PURAKAL", id: "purakal", logo: purakalLogo },
     { name: "PREZENT", id: "prezent", logo: prezentLogo },
     { name: "SOTC", id: "sotc", logo: sotcLogo },
@@ -30,12 +29,11 @@ export const TrustSection = () => {
   );
 
   return (
-    <section className="py-16 bg-muted/50 border-y border-border">
+    <section id="benefits" className="border-y border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Heading + subcopy */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-foreground mb-4 font-display">
               Trusted by Industry Leaders Across Key Sectors
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -56,7 +54,7 @@ export const TrustSection = () => {
                     className="flex-[0_0_200px] flex items-center justify-center h-24 bg-card rounded-lg border border-border p-6"
                   >
                     {client.logo ? (
-                      <img src={client.logo} alt={client.name} className="max-h-14 max-w-[160px] object-contain" />
+                      <img src={client.logo} alt={client.name} className="max-h-14 max-w-[160px] object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
                     ) : (
                       <span className="text-xl font-bold text-muted-foreground uppercase tracking-wider">
                         {client.name}
@@ -71,33 +69,33 @@ export const TrustSection = () => {
           {/* Trust badges */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Enterprise-Grade Training</h3>
+                <h3 className="font-semibold text-foreground mb-1 font-display">Enterprise-Grade Training</h3>
                 <p className="text-sm text-muted-foreground">
                   Designed for organizations of all sizes, with a proven framework for turning Copilot licenses into everyday usage and measurable impact.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center">
                 <Award className="w-6 h-6 text-secondary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Microsoft MVP-Led</h3>
+                <h3 className="font-semibold text-foreground mb-1 font-display">Microsoft MVP-Led</h3>
                 <p className="text-sm text-muted-foreground">
                   Training and advisory delivered by recognized Microsoft experts and MVPs who work in the Microsoft 365 and Copilot ecosystem every day.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-accent-foreground" />
+              <div className="flex-shrink-0 w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-secondary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Proven Results</h3>
+                <h3 className="font-semibold text-foreground mb-1 font-display">Proven Results</h3>
                 <p className="text-sm text-muted-foreground">
                   Real-world adoption gains and ROI stories, from healthcare to enterprise tech — including jumps from under 20% to 80%+ active Copilot usage in 30 days.
                 </p>

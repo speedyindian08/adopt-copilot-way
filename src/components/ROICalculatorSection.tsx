@@ -26,11 +26,11 @@ export const ROICalculatorSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="bg-card/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-display">
               Estimate Your Copilot ROI in Minutes
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -42,10 +42,10 @@ export const ROICalculatorSection = () => {
             {/* Calculator inputs */}
             <div className="bg-card p-8 rounded-xl border border-border shadow-lg">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center">
                   <Calculator className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Your Numbers</h3>
+                <h3 className="text-xl font-semibold text-foreground font-display">Your Numbers</h3>
               </div>
 
               <div className="space-y-5">
@@ -59,6 +59,7 @@ export const ROICalculatorSection = () => {
                     min={1}
                     value={users}
                     onChange={(e) => setUsers(Math.max(1, parseInt(e.target.value) || 1))}
+                    className="bg-muted border-border"
                   />
                 </div>
                 <div>
@@ -72,6 +73,7 @@ export const ROICalculatorSection = () => {
                     step={0.5}
                     value={hoursSaved}
                     onChange={(e) => setHoursSaved(Math.max(0.5, parseFloat(e.target.value) || 0.5))}
+                    className="bg-muted border-border"
                   />
                 </div>
                 <div>
@@ -84,6 +86,7 @@ export const ROICalculatorSection = () => {
                     min={1}
                     value={hourlyCost}
                     onChange={(e) => setHourlyCost(Math.max(1, parseInt(e.target.value) || 1))}
+                    className="bg-muted border-border"
                   />
                 </div>
               </div>
@@ -92,25 +95,25 @@ export const ROICalculatorSection = () => {
             {/* Results */}
             <div className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-card p-5 rounded-xl border border-border shadow-md text-center">
+                <div className="bg-card p-5 rounded-xl border border-border card-glow transition-all duration-200 text-center">
                   <DollarSign className="w-6 h-6 text-primary mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-primary">{formatCurrency(annualSavings)}</p>
+                  <p className="text-2xl font-bold text-primary font-display">{formatCurrency(annualSavings)}</p>
                   <p className="text-xs text-muted-foreground mt-1">Annual Savings</p>
                 </div>
-                <div className="bg-card p-5 rounded-xl border border-border shadow-md text-center">
+                <div className="bg-card p-5 rounded-xl border border-border card-glow transition-all duration-200 text-center">
                   <Clock className="w-6 h-6 text-secondary mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-secondary">{paybackMonths} mo</p>
+                  <p className="text-2xl font-bold text-secondary font-display">{paybackMonths} mo</p>
                   <p className="text-xs text-muted-foreground mt-1">Payback Period</p>
                 </div>
-                <div className="bg-card p-5 rounded-xl border border-border shadow-md text-center">
-                  <TrendingUp className="w-6 h-6 text-brand-green mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-brand-green">{roi}%</p>
+                <div className="bg-card p-5 rounded-xl border border-border card-glow transition-all duration-200 text-center">
+                  <TrendingUp className="w-6 h-6 text-secondary mx-auto mb-2" />
+                  <p className="text-2xl font-bold text-secondary font-display">{roi}%</p>
                   <p className="text-xs text-muted-foreground mt-1">Projected ROI</p>
                 </div>
               </div>
 
-              <div className="bg-muted/50 rounded-lg p-5 border border-border">
-                <p className="text-sm font-semibold text-foreground mb-3">Why this matters:</p>
+              <div className="bg-card rounded-lg p-5 border border-border">
+                <p className="text-sm font-semibold text-foreground mb-3 font-display">Why this matters:</p>
                 <ul className="space-y-2">
                   {benefits.map((benefit, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">

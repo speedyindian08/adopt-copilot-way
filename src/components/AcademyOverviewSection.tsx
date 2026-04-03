@@ -25,14 +25,14 @@ export const AcademyOverviewSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="overview">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-primary mb-4">
               The Program
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-display">
               Inside ESS Secure Copilot Academy
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -42,37 +42,37 @@ export const AcademyOverviewSection = () => {
 
           {/* Key highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-card p-6 rounded-lg border border-border shadow-md text-center">
+            <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200 text-center">
               <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-1">Flexible Format</h3>
+              <h3 className="font-semibold text-foreground mb-1 font-display">Flexible Format</h3>
               <p className="text-sm text-muted-foreground">4–7 hours total, structured to fit your team's schedule</p>
             </div>
-            <div className="bg-card p-6 rounded-lg border border-border shadow-md text-center">
+            <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200 text-center">
               <Award className="w-8 h-8 text-secondary mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-1">Microsoft MVP-Led</h3>
+              <h3 className="font-semibold text-foreground mb-1 font-display">Microsoft MVP-Led</h3>
               <p className="text-sm text-muted-foreground">Delivered by recognized experts in Copilot and M365</p>
             </div>
-            <div className="bg-card p-6 rounded-lg border border-border shadow-md text-center">
-              <Target className="w-8 h-8 text-accent-foreground mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-1">Outcome-Focused</h3>
+            <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200 text-center">
+              <Target className="w-8 h-8 text-secondary mx-auto mb-3" />
+              <h3 className="font-semibold text-foreground mb-1 font-display">Outcome-Focused</h3>
               <p className="text-sm text-muted-foreground">Role-based workflows, governed deployments, measurable ROI</p>
             </div>
           </div>
 
           {/* Key components */}
-          <h3 className="text-xl font-semibold text-foreground text-center mb-6">
+          <h3 className="text-xl font-semibold text-foreground text-center mb-6 font-display">
             Key Components of the Academy
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {components.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="flex items-start gap-4 bg-card p-5 rounded-lg border border-border">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div key={index} className="flex items-start gap-4 bg-card p-5 rounded-lg border border-border card-glow transition-all duration-200">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary/15 rounded-lg flex items-center justify-center">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                    <h4 className="font-semibold text-foreground mb-1 font-display">{item.title}</h4>
                     <p className="text-muted-foreground text-sm">{item.description}</p>
                   </div>
                 </div>

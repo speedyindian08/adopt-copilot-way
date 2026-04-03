@@ -27,12 +27,11 @@ export const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="bg-card/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          {/* Sound familiar? qualifier strip */}
           <div className="mb-12">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-6 text-center">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-6 text-center font-display">
               Sound familiar?
             </p>
             <div className="flex flex-col md:flex-row gap-6 justify-center">
@@ -45,9 +44,8 @@ export const ProblemSection = () => {
             </div>
           </div>
 
-          {/* Why Copilot Isn't Delivering ROI */}
           <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-display">
               Why Copilot Isn't Delivering ROI Yet
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -59,14 +57,14 @@ export const ProblemSection = () => {
             {painPoints.map((reason, index) => (
               <div
                 key={index}
-                className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow"
+                className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center">
                     <AlertTriangle className="w-5 h-5 text-destructive" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-1">{reason.title}</h3>
+                    <h3 className="text-lg font-semibold text-foreground mb-1 font-display">{reason.title}</h3>
                     <p className="text-muted-foreground text-sm">{reason.description}</p>
                   </div>
                 </div>

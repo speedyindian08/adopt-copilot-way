@@ -3,7 +3,20 @@ import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background pt-20 pb-24 lg:pt-32 lg:pb-32">
+    <section className="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-32">
+      {/* Grid overlay */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `
+            radial-gradient(ellipse 60% 50% at 50% 40%, hsl(224 76% 48% / 0.15), transparent),
+            linear-gradient(hsl(var(--color-border)) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--color-border)) 1px, transparent 1px)
+          `,
+          backgroundSize: "100% 100%, 48px 48px, 48px 48px",
+        }}
+      />
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-foreground mb-6 animate-fade-in">
@@ -11,12 +24,12 @@ export const HeroSection = () => {
             ESS Secure Copilot Academy
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground mb-4 animate-fade-in font-display" style={{ animationDelay: "0.1s" }}>
             Copilot Governance &amp; Responsible AI{" "}
-            <span className="text-primary">for Regulated Industries</span>
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">for Regulated Industries</span>
           </h1>
 
-          <p className="text-2xl sm:text-3xl font-semibold text-foreground/80 mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
+          <p className="text-2xl sm:text-3xl font-semibold text-foreground/80 mb-6 animate-fade-in font-display" style={{ animationDelay: "0.15s" }}>
             Buying Copilot is easy. Getting ROI isn't.
           </p>
 
@@ -57,28 +70,28 @@ export const HeroSection = () => {
 
           {/* Outcome Stats Bar */}
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4 font-display">
               What ESS Copilot Academy clients are seeing in 30–90 days
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Users className="w-5 h-5 text-primary" />
-                  <span className="text-3xl font-bold text-primary">20→85%</span>
+                  <span className="text-3xl font-bold text-primary font-display">20→85%</span>
                 </div>
                 <div className="text-sm text-muted-foreground">Active Copilot users in 30 days</div>
               </div>
-              <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-secondary" />
-                  <span className="text-3xl font-bold text-secondary">35%</span>
+                  <span className="text-3xl font-bold text-secondary font-display">35%</span>
                 </div>
                 <div className="text-sm text-muted-foreground">Average productivity lift among effective Copilot users</div>
               </div>
-              <div className="bg-card p-6 rounded-lg border border-border shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-card p-6 rounded-lg border border-border card-glow transition-all duration-200">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <Shield className="w-5 h-5 text-accent-foreground" />
-                  <span className="text-3xl font-bold text-accent-foreground">353%</span>
+                  <Shield className="w-5 h-5 text-secondary" />
+                  <span className="text-3xl font-bold text-secondary font-display">353%</span>
                 </div>
                 <div className="text-sm text-muted-foreground">Projected 3‑year ROI on Copilot investment</div>
               </div>
@@ -86,9 +99,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Decorative gradient blob */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl -z-10" />
     </section>
   );
 };

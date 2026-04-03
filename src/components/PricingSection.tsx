@@ -54,14 +54,14 @@ export const PricingSection = () => {
   const bookingUrl = "https://outlook.office365.com/book/ESSCopilotAdoptionConsultation@yourorg.com";
 
   return (
-    <section id="pricing" className="py-20 bg-background">
+    <section id="pricing" className="bg-card/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-primary mb-4">
               Programs &amp; Pricing
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-display">
               ESS Secure Copilot Academy Engagement Models
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -73,21 +73,21 @@ export const PricingSection = () => {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-card rounded-xl border-2 p-8 flex flex-col ${
+                className={`relative bg-card rounded-xl border-2 p-8 flex flex-col transition-all duration-300 ${
                   plan.highlighted
-                    ? "border-primary shadow-2xl scale-105 lg:scale-110"
-                    : "border-border shadow-md hover:shadow-lg"
-                } transition-all duration-300`}
+                    ? "border-primary shadow-glow scale-[1.03]"
+                    : "border-border card-glow"
+                }`}
               >
                 {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1 shadow-lg whitespace-nowrap">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1 shadow-lg whitespace-nowrap">
                     <Star className="w-4 h-4" />
                     {plan.badge}
                   </div>
                 )}
 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-2 font-display">{plan.name}</h3>
                   <p className="text-sm text-primary font-medium mb-2">{plan.target}</p>
                   <p className="text-muted-foreground text-sm">{plan.duration}</p>
                 </div>

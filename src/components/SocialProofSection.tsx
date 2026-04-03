@@ -41,11 +41,11 @@ export const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="bg-card/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-display">
               Trusted by Industry Leaders Across Key Sectors
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -58,9 +58,9 @@ export const SocialProofSection = () => {
             {blurbs.map((blurb, index) => {
               const Icon = blurb.icon;
               return (
-                <div key={index} className="bg-card border border-border rounded-lg p-6 text-center shadow-md">
+                <div key={index} className="bg-card border border-border rounded-lg p-6 text-center card-glow transition-all duration-200">
                   <Icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-2">{blurb.title}</h3>
+                  <h3 className="font-semibold text-foreground mb-2 font-display">{blurb.title}</h3>
                   <p className="text-sm text-muted-foreground">{blurb.description}</p>
                 </div>
               );
@@ -72,7 +72,7 @@ export const SocialProofSection = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-shadow"
+                className="bg-card border border-border rounded-lg p-8 card-glow transition-all duration-200"
               >
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
                 <blockquote className="text-foreground mb-6 leading-relaxed text-sm">
