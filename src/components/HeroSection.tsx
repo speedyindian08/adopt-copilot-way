@@ -4,6 +4,19 @@ import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 export const HeroSection = () => {
   return (
     <section className="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-32">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+        src="/videos/hero-bg.mp4"
+      />
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 -z-10 bg-background/80" />
+
       {/* Grid overlay */}
       <div
         className="absolute inset-0 -z-10"
