@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         display: ["Sora", "sans-serif"],
         body: ["Plus Jakarta Sans", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
