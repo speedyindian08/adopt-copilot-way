@@ -10,38 +10,21 @@ import { SocialProofSection } from "@/components/SocialProofSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
-import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div style={{ backgroundColor: '#0a0d12', minHeight: '100vh' }}>
       <Header />
       <main>
         <HeroSection />
-        <ScrollReveal>
-          <ProblemSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <ConsultationValueSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <ROICalculatorSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <AcademyOverviewSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <PricingSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <TrustSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <SocialProofSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <FinalCTASection />
-        </ScrollReveal>
+        <ProblemSection />
+        <ConsultationValueSection />
+        <ROICalculatorSection />
+        <AcademyOverviewSection />
+        <PricingSection />
+        <TrustSection />
+        <SocialProofSection />
+        <FinalCTASection />
       </main>
       <Footer />
       <Chatbot />
@@ -50,3 +33,4 @@ const Index = () => {
 };
 
 export default Index;
+
