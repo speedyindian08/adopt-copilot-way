@@ -14,7 +14,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
-    <div style={{ backgroundColor: '#0a0d12', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: 'hsl(222, 47%, 9%)', minHeight: '100vh' }}>
       <Header />
       <main>
         <HeroSection />
